@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "Izac's Website",
+    title: "Izac's Website"
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -9,16 +9,16 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "",
-      },
+        trackingId: "UA-39113521-1"
+      }
     },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
-      },
+        icon: "./src/presentation/assets/images/icon.png"
+      }
     },
     "gatsby-transformer-remark",
     "gatsby-plugin-mdx",
@@ -28,17 +28,17 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/presentation/assets/images/"
       },
-      __key: "images",
+      __key: "images"
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
-        path: "./src/pages/",
+        path: "./src/pages/"
       },
-      __key: "pages",
-    },
-  ],
-};
+      __key: "pages"
+    }
+  ]
+}
