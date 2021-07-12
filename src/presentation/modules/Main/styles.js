@@ -12,20 +12,26 @@ export const StyledMain = styled.main`
   }
 
   padding: 1rem;
+  max-width: calc(100% - 2rem);
+  min-width: calc(100% - 2rem);
 
   > header {
     grid-area: header;
-    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 1rem;
+    min-width: 100%;
+    max-width: 100%;
+
+    > h1 {
+      margin-bottom: 0;
+    }
   }
 
   > nav {
     grid-area: nav;
-    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,7 +41,6 @@ export const StyledMain = styled.main`
 
   > section {
     grid-area: section;
-    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +50,6 @@ export const StyledMain = styled.main`
 
   > footer {
     grid-area: footer;
-    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;

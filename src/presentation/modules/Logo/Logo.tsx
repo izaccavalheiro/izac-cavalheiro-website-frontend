@@ -2,12 +2,11 @@ import * as React from "react"
 
 import logoSource from './../../assets/images/logo-izac-cavalheiro.png'
 
-import { ComponentProps } from '../'
+import { ComponentProps } from '../../components'
 
 import {
-  Image,
-  Link
-} from '../'
+  Image
+} from '../../components'
 
 import {
   Wrapper
@@ -28,12 +27,11 @@ export const Logo = (props: LogoProps): React.ReactElement => {
 
   const persisProps = {
     href,
-    className,
     size
   }
 
   return (
-    <Wrapper {...persisProps}>
+    <Wrapper className={`logo ${className}`} {...persisProps}>
       <Image src={logoSource} />
     </Wrapper>
   )

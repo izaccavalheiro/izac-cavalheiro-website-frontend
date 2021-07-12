@@ -1,11 +1,10 @@
 import React from 'react'
 
-import {ComponentProps} from '../Default'
+import {ComponentProps} from '../../components'
 
 import {Wrapper} from './styles'
 
 interface TypographyProps extends ComponentProps {
-
 }
 
 export const Typography = (props: TypographyProps) => {

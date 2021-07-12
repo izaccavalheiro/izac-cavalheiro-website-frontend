@@ -1,8 +1,8 @@
 import * as React from "react"
 
-import { ComponentProps } from "../"
+import {ComponentProps} from "../../components"
 
-import { StyledMain } from "./styles"
+import {StyledMain} from "./styles"
 
 interface MainProps extends ComponentProps {
   responsive: boolean
@@ -17,13 +17,13 @@ export const Main = (props: MainProps): React.ReactElement => {
     id
   } = props
 
-  const persisProps = {
+  const persistProps = {
     id,
     responsive,
     fullWidth
   }
 
   return (
-    <StyledMain {...persisProps}>{children}</StyledMain>
+    <StyledMain {...persistProps}>{children}</StyledMain>
   )
 }
