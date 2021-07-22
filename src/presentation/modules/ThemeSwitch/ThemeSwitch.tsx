@@ -40,7 +40,7 @@ export const ThemeSwitch = (props: ThemeSwitchProps): React.ReactElement => {
         <Span>Trocar</Span>
       </Button>
 
-      <Input type="checkbox" checked={checked} />
+      <Input type="checkbox" checked={checked} onChange={handleUpdate} />
     </Wrapper>
   )
 }

@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { ComponentProps } from "../../components"
+import { ComponentProps } from ".."
 
 import { StyledNav } from "./styles"
 

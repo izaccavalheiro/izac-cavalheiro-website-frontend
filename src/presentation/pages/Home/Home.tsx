@@ -37,8 +37,6 @@ export function HomePage(props: PageProps) {
 
       <MainNav />
 
-      
-
       <Section id="home-page">
         <Div>
           <H2 className="text-align-center">{t("Welcome")}</H2>
