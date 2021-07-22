@@ -9,8 +9,8 @@ export const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    min-width: 4rem;
-    max-width: 4rem;
+    min-width: 5rem;
+    max-width: 5rem;
     min-height: auto;
     max-height: unset;
 

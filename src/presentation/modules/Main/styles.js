@@ -8,7 +8,7 @@ export const StyledMain = styled.main`
       'nav'
       'section'
       'footer';
-    grid-gap: 2rem;`
+    grid-gap: 1rem;`
   }
 
   padding: 1rem;

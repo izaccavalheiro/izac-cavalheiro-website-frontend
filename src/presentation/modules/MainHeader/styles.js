@@ -18,6 +18,18 @@ export const Wrapper = styled(Header)`
     > h1 {
       margin-bottom: 0;
     }
+
+    > div {
+      min-width: 100%;
+
+      &.top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+      }
+    }
   }
 
   @media(min-width: 20rem) {
@@ -25,5 +37,10 @@ export const Wrapper = styled(Header)`
   }
 
   @media(min-width: 60rem) {
+    > div {
+      &.top {
+        flex-direction: row;
+      }
+    }
   }
 `

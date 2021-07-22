@@ -3,7 +3,8 @@ import * as React from "react"
 import { ComponentProps } from "../../components"
 
 import {
-  H1
+  H1,
+  Div
 } from '../../components'
 
 import { useLanguages } from '../../hooks'
@@ -27,9 +28,11 @@ export const MainHeader = (props: ComponentProps): React.ReactElement => {
   } = useLanguages()
 
   return <Wrapper>
-    <ThemeSwitch />
+    <Div className='top'>
+      <ThemeSwitch />
 
-    <LanguageSelector current={currentLanguage} data={languages} handleUpdate={() => handleChangeLanguage} />
+      <LanguageSelector current={currentLanguage} data={languages} handleUpdate={() => handleChangeLanguage} />
+    </Div>
 
     <Logo size='large' />
 
