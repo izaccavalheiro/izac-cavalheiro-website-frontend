@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react"
 
-import {ComponentProps} from '../../components'
+import {ComponentProps} from "../../components"
 
-import {Wrapper} from './styles'
+import {Wrapper} from "./styles"
 
 interface TypographyProps extends ComponentProps {
 }

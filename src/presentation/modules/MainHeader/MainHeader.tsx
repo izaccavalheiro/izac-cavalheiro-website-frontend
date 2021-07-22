@@ -5,19 +5,19 @@ import { ComponentProps } from "../../components"
 import {
   H1,
   Div
-} from '../../components'
+} from "../../components"
 
-import { useLanguages } from '../../hooks'
+import { useLanguages } from "../../hooks"
 
 import {
   LanguageSelector,
   ThemeSwitch,
   Logo
-} from '../'
+} from "../"
 
 import {
   Wrapper
-} from './styles'
+} from "./styles"
 
 export const MainHeader = (props: ComponentProps): React.ReactElement => {
   const {
@@ -28,14 +28,14 @@ export const MainHeader = (props: ComponentProps): React.ReactElement => {
   } = useLanguages()
 
   return <Wrapper>
-    <Div className='top'>
+    <Div className="top">
       <ThemeSwitch />
 
       <LanguageSelector current={currentLanguage} data={languages} handleUpdate={() => handleChangeLanguage} />
     </Div>
 
-    <Logo size='large' />
+    <Logo size="large" />
 
-    <H1 className='text-align-center'>{t('Izac Cavalheiro')}</H1>
+    <H1 className="text-align-center">{t("Izac Cavalheiro")}</H1>
   </Wrapper>
 }

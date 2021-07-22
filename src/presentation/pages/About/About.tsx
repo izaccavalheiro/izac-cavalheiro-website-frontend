@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { PageProps } from 'gatsby'
+import * as React from "react"
+import { PageProps } from "gatsby"
 import {
   Link as TLink,
   useTranslation
-} from 'gatsby-plugin-react-i18next'
+} from "gatsby-plugin-react-i18next"
 
 import {
   Div,
@@ -14,19 +14,19 @@ import {
   Paragraph,
   List,
   ListItem
-} from '../../components'
+} from "../../components"
 
 import {
   Layout,
   Main,
   Nav,
   MainHeader
-} from '../../modules'
+} from "../../modules"
 
 export function AboutPage(props: PageProps) {
   const {t} = useTranslation()
 
-  const year = '2021'
+  const year = "2021"
 
   return <Layout>
     <Main responsive fullWidth>
@@ -35,28 +35,28 @@ export function AboutPage(props: PageProps) {
       <Nav>
         <List>
           <ListItem>
-            <TLink to='/'>{t('Home')}</TLink>
+            <TLink to="/">{t("Home")}</TLink>
           </ListItem>
           <ListItem>
-            <TLink to={`/${t('about')}`}>{t('About')}</TLink>
+            <TLink to={`/${t("about")}`}>{t("About")}</TLink>
           </ListItem>
           <ListItem>
-            <TLink to={`/${t('contact')}`}>{t('Contact')}</TLink>
+            <TLink to={`/${t("contact")}`}>{t("Contact")}</TLink>
           </ListItem>
         </List>
       </Nav>
 
-      <Section id='about-page'>
+      <Section id="about-page">
         <Div>
-          <H2 className='text-align-center'>{t('About')}</H2>
+          <H2 className="text-align-center">{t("About")}</H2>
 
-          <H3 className='text-align-center'>{t('Summary')}</H3>
+          <H3 className="text-align-center">{t("Summary")}</H3>
 
-          <H3 className='text-align-center'>{t('Biography')}</H3>
+          <H3 className="text-align-center">{t("Biography")}</H3>
         </Div>
       </Section>
       <Footer>
-        <Paragraph>{t('Izac Cavalheiro')}, { year }. </Paragraph>
+        <Paragraph>{t("Izac Cavalheiro")}, { year }. </Paragraph>
       </Footer>
     </Main>
   </Layout>

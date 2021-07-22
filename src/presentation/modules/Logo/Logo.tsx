@@ -1,16 +1,16 @@
 import * as React from "react"
 
-import logoSource from './../../assets/images/logo-izac-cavalheiro.png'
+import logoSource from "./../../assets/images/logo-izac-cavalheiro.png"
 
-import { ComponentProps } from '../../components'
+import { ComponentProps } from "../../components"
 
 import {
   Image
-} from '../../components'
+} from "../../components"
 
 import {
   Wrapper
-} from './styles'
+} from "./styles"
 
 interface LogoProps extends ComponentProps {
   href?: string

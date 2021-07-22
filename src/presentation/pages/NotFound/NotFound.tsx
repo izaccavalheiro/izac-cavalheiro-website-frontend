@@ -1,10 +1,10 @@
-import * as React from 'react'
-import { PageProps } from 'gatsby'
+import * as React from "react"
+import { PageProps } from "gatsby"
 import {
   Link as TLink,
   useTranslation,
   useI18next
-} from 'gatsby-plugin-react-i18next'
+} from "gatsby-plugin-react-i18next"
 
 import {
   Div,
@@ -17,7 +17,7 @@ import {
   Paragraph,
   List,
   ListItem
-} from '../../components'
+} from "../../components"
 
 import {
   Layout,
@@ -25,14 +25,14 @@ import {
   Logo,
   Nav,
   LanguageSelector
-} from '../../modules'
+} from "../../modules"
 
-import { useLanguages } from '../../hooks'
+import { useLanguages } from "../../hooks"
 
 export function NotFoundPage(props: PageProps) {
   const {t} = useTranslation()
 
-  const year = '2021'
+  const year = "2021"
 
   const {
     current: currentLanguage,
@@ -43,9 +43,9 @@ export function NotFoundPage(props: PageProps) {
   return <Layout>
     <Main responsive fullWidth>
       <Header>
-        <Logo size='large' />
+        <Logo size="large" />
 
-        <H1 className='text-align-center'>{t('Izac Cavalheiro')}</H1>
+        <H1 className="text-align-center">{t("Izac Cavalheiro")}</H1>
 
         <LanguageSelector current={currentLanguage} data={languages} handleUpdate={() => handleChangeLanguage} />
       </Header>
@@ -53,24 +53,24 @@ export function NotFoundPage(props: PageProps) {
       <Nav>
         <List>
           <ListItem>
-            <TLink to='/'>{t('Home')}</TLink>
+            <TLink to="/">{t("Home")}</TLink>
           </ListItem>
           <ListItem>
-            <TLink to='/NotFound'>{t('About')}</TLink>
+            <TLink to="/NotFound">{t("About")}</TLink>
           </ListItem>
           <ListItem>
-            <TLink to='/contact'>{t('Contact')}</TLink>
+            <TLink to="/contact">{t("Contact")}</TLink>
           </ListItem>
         </List>
       </Nav>
 
-      <Section id='about-page'>
+      <Section id="about-page">
         <Div>
-          <H2 className='text-align-center'>{t('Not Found')}</H2>
+          <H2 className="text-align-center">{t("Not Found")}</H2>
         </Div>
       </Section>
       <Footer>
-        <Paragraph>{t('Izac Cavalheiro')}, { year }. </Paragraph>
+        <Paragraph>{t("Izac Cavalheiro")}, { year }. </Paragraph>
       </Footer>
     </Main>
   </Layout>

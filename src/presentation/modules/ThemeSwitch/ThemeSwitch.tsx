@@ -1,16 +1,16 @@
 import * as React from "react"
 
-import {ComponentProps} from '../../components'
+import {ComponentProps} from "../../components"
 
 import {
   Button,
   Input,
   Span
-} from '../../components'
+} from "../../components"
 
 import {
   Wrapper
-} from './styles'
+} from "./styles"
 
 interface ThemeSwitchProps extends ComponentProps {
   current?: string
@@ -19,7 +19,7 @@ interface ThemeSwitchProps extends ComponentProps {
 
 export const ThemeSwitch = (props: ThemeSwitchProps): React.ReactElement => {
   const {
-    className = '',
+    className = "",
     id,
     current = false
   } = props
@@ -36,11 +36,11 @@ export const ThemeSwitch = (props: ThemeSwitchProps): React.ReactElement => {
 
   return (
     <Wrapper className={`theme-switch ${className}`} {...persistProps}>
-      <Button className={`${checked ? 'active' : ''}`} onClick={handleUpdate}>
+      <Button className={`${checked ? "active" : ""}`} onClick={handleUpdate}>
         <Span>Trocar</Span>
       </Button>
 
-      <Input type='checkbox' checked={checked} />
+      <Input type="checkbox" checked={checked} />
     </Wrapper>
   )
 }

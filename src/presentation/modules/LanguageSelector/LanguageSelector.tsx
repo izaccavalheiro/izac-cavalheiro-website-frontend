@@ -1,16 +1,16 @@
 import * as React from "react"
 
-import {ComponentProps} from '../../components'
+import {ComponentProps} from "../../components"
 
 import {
   Link,
   List,
   ListItem
-} from '../../components'
+} from "../../components"
 
 import {
   Wrapper
-} from './styles'
+} from "./styles"
 
 interface LanguageSelectorProps extends ComponentProps {
   current?: string
@@ -20,7 +20,7 @@ interface LanguageSelectorProps extends ComponentProps {
 
 export const LanguageSelector = (props: LanguageSelectorProps): React.ReactElement => {
   const {
-    className = '',
+    className = "",
     id,
     data,
     current
@@ -35,10 +35,10 @@ export const LanguageSelector = (props: LanguageSelectorProps): React.ReactEleme
       <List>
         {data.map((languageItem, index) => {
           const key = `language-selector-list-item-${index}`
-          const linkHref = languageItem !== 'en' ? `/${languageItem}` : '/'
-          const language = current || 'en'
+          const linkHref = languageItem !== "en" ? `/${languageItem}` : "/"
+          const language = current || "en"
 
-          return <ListItem key={key} className={`${language === languageItem ? 'active' : ''}`}>
+          return <ListItem key={key} className={`${language === languageItem ? "active" : ""}`}>
             <Link href={linkHref} title={`${languageItem}`}>{languageItem}</Link>
           </ListItem>
         })}

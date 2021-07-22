@@ -1,1 +1,1 @@
-export * from './Strong'
+export * from "./Strong"
