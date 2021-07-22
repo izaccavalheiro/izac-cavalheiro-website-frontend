@@ -10,11 +10,11 @@ export const Paragraph = (props: ComponentProps): React.ReactElement => {
     className
   } = props
 
-  const htmlProps = {
+  const persistProps = {
     className
   }
 
   return (
-    <StyledParagraph {...htmlProps}>{children}</StyledParagraph>
+    <StyledParagraph {...persistProps}>{children}</StyledParagraph>
   )
 }

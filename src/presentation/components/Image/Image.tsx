@@ -23,7 +23,7 @@ export const Image = (props: ImageProps): React.ReactElement => {
     name
   } = props
 
-  const htmlProps = {
+  const persistProps = {
     src,
     alt,
     border,
@@ -33,6 +33,6 @@ export const Image = (props: ImageProps): React.ReactElement => {
   }
 
   return (
-    <StyledImage {...htmlProps} />
+    <StyledImage {...persistProps} />
   )
 }

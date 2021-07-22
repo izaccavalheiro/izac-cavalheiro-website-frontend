@@ -1,27 +1,33 @@
 export const data = {
-  google: {
-    gaId: '',
-    adsId: '',
-    gtmId: ''
+  vendor: {
+    google: {
+      gaId: '',
+      adsId: '',
+      gtmId: ''
+    },
+    sentry: {
+      dsn: '',
+      project: '',
+      environment: '',
+      id: ''
+    },
+    logrocket: {
+      project: '',
+      environment: '',
+      id: ''
+    },
+    twitter: {
+      appId: ''
+    },
+    facebook: {
+      appId: ''
+    },
   },
-  sentry: {
-    dsn: '',
-    project: '',
-    environment: '',
-    id: ''
+  languageSelector: {
+    available: 'i18next',
+    exclude: ['']
   },
-  logrocket: {
-    project: '',
-    environment: '',
-    id: ''
-  },
-  twitter: {
-    appId: ''
-  },
-  facebook: {
-    appId: ''
-  },
-  links: {
+  socialNetwork: {
     socialNetwork: [{
       name: 'facebook',
       url: 'https://fb.me/izaccavalheiro',

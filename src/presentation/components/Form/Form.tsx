@@ -18,13 +18,13 @@ export const Form = (props: FormProps): React.ReactElement => {
     target
   } = props
 
-  const htmlProps = {
+  const persistProps = {
     action,
     method,
     target
   }
 
   return (
-    <StyledForm {...htmlProps}>{children}</StyledForm>
+    <StyledForm {...persistProps}>{children}</StyledForm>
   )
 }

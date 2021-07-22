@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.a`
-  @media(min-width: 0px) {
+  @media(min-width: 0rem) {
     ${props => props.size === 'large' && (
       `max-width: 100%;
       min-width: 100%;
@@ -25,7 +25,7 @@ export const Wrapper = styled.a`
     }
   }
 
-  @media(min-width: 320px) {
+  @media(min-width: 20rem) {
     ${props => props.size === 'large' && (
       `max-width: 10rem;
       min-width: 10rem;

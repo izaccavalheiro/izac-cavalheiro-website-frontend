@@ -1,32 +1,30 @@
-import * as React from "react"
+import * as React from 'react'
+import { graphql, PageProps } from 'gatsby'
+import { Helmet } from 'react-helmet'
 
-import {
-  Div,
-  Layout,
-  Main,
-  Logo,
-  Link,
-  H1,
-  H2,
-  Paragraph
-} from '../presentation/components'
+import { NotFoundPage } from '../presentation/pages/NotFound'
 
-export default function Page(): JSX.Element {
-  return (
-    <Layout>
-      <Main>
-        <Logo />
-
-        <H1>Izac Cavalheiro</H1>
-
-        <Div>
-          <H2 className='text-align-center'>404 - Page not found</H2>
-
-          <Paragraph className='text-align-center'>
-            <Link href="/">Home</Link>
-          </Paragraph>
-        </Div>
-      </Main>
-    </Layout>
-  )
+export default function Page(props: PageProps): JSX.Element {
+  return <>
+    <Helmet>
+      <link rel='preconnect' href='https://fonts.googleapis.com' />
+      <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+      <link href='https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap' rel='stylesheet' />
+    </Helmet>
+    <NotFoundPage {...props} />
+  </>
 }
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`

@@ -7,20 +7,26 @@ import { StyledButton } from "./styles"
 interface ButtonProps extends ComponentProps {
   name?: string
   label?: string
+  onClick?: (event: Event) => void
+  active?: boolean
 }
 
 export const Button = (props: ButtonProps): React.ReactElement => {
   const {
     children,
     name,
-    label
+    label,
+    onClick,
+    className
   } = props
 
-  const htmlProps = {
-    name
+  const persistProps = {
+    name,
+    onClick,
+    className
   }
 
   return (
-    <StyledButton {...htmlProps}>{children||label}</StyledButton>
+    <StyledButton {...persistProps}>{children||label}</StyledButton>
   )
 }

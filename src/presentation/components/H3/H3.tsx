@@ -2,9 +2,9 @@ import * as React from "react"
 
 import { ComponentProps } from "../"
 
-import { StyledH2 } from "./styles"
+import { StyledH3 } from "./styles"
 
-export const H2 = (props: ComponentProps): React.ReactElement => {
+export const H3 = (props: ComponentProps): React.ReactElement => {
   const {
     children,
     className
@@ -15,6 +15,6 @@ export const H2 = (props: ComponentProps): React.ReactElement => {
   }
 
   return (
-    <StyledH2 {...persistProps}>{children}</StyledH2>
+    <StyledH3 {...persistProps}>{children}</StyledH3>
   )
 }

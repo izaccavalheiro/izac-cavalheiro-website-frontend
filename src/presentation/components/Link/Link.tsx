@@ -8,6 +8,7 @@ interface LinkProps extends ComponentProps {
   name?: string
   href?: string
   target?: string
+  title?: string
 }
 
 export const Link = (props: LinkProps): React.ReactElement => {

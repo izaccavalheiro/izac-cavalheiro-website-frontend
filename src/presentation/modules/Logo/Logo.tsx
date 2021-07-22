@@ -25,13 +25,13 @@ export const Logo = (props: LogoProps): React.ReactElement => {
     size
   } = props
 
-  const persisProps = {
+  const persistProps = {
     href,
     size
   }
 
   return (
-    <Wrapper className={`logo ${className}`} {...persisProps}>
+    <Wrapper className={`logo ${className}`} {...persistProps}>
       <Image src={logoSource} />
     </Wrapper>
   )

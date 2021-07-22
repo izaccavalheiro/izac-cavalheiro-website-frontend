@@ -20,7 +20,6 @@ export const StyledMain = styled.main`
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     gap: 1rem;
     min-width: 100%;
     max-width: 100%;

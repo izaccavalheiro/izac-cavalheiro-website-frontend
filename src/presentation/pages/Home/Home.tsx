@@ -1,38 +1,38 @@
 import * as React from 'react'
 import { PageProps } from 'gatsby'
-import {Link as TLink, useTranslation} from 'gatsby-plugin-react-i18next'
+import {
+  Link as TLink,
+  useTranslation,
+  useI18next
+} from 'gatsby-plugin-react-i18next'
 
 import {
   Div,
-  Layout,
-  Main,
-  Logo,
   Link,
-  Header,
   Footer,
   Section,
-  H1,
   H2,
   Paragraph,
-  Nav,
   List,
   ListItem
 } from '../../components'
 
+import {
+  Layout,
+  Main,
+  Nav,
+  MainHeader
+} from '../../modules'
+
+import { useLanguages } from '../../hooks'
+
 export function HomePage(props: PageProps) {
   const {t} = useTranslation()
-
   const year = '2021'
 
   return <Layout>
     <Main responsive fullWidth>
-      <Header>
-        <Logo size='large' />
-
-        <H1 className='text-align-center'>{t('Izac Cavalheiro')}</H1>
-
-        <LanguageSelector />
-      </Header>
+      <MainHeader />
 
       <Nav>
         <List>

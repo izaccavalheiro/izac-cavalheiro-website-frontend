@@ -14,7 +14,9 @@ interface InputProps extends ComponentProps {
   title?: string
   alt?: string
   placeholder?: string
-  onChange?: () => void
+  onChange?: (event: Event) => void
+  checked?: boolean | string
+  ref?: any
 }
 
 export const Input = (props: InputProps): React.ReactElement => {
@@ -28,10 +30,11 @@ export const Input = (props: InputProps): React.ReactElement => {
     title,
     alt,
     placeholder,
-    onChange
+    onChange,
+    checked
   } = props
 
-  const htmlProps = {
+  const persistProps = {
     type,
     name,
     maxLength,
@@ -41,10 +44,11 @@ export const Input = (props: InputProps): React.ReactElement => {
     title,
     alt,
     placeholder,
-    onChange
+    onChange,
+    checked
   }
 
   return (
-    <StyledInput {...htmlProps} />
+    <StyledInput {...persistProps} />
   )
 }
