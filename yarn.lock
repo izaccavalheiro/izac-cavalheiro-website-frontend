@@ -1563,6 +1563,11 @@
     escape-string-regexp "^2.0.0"
     lodash.deburr "^4.1.0"
 
+"@stencil/core@^2.0.1":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-2.6.0.tgz#29da96d8b6fc83e689b9f297ef3e8b59b90a676a"
+  integrity sha512-QsxWayZyusnqSZrlCl81R71rA3KqFjVVQSH4E0rGN15F1GdQaFonKlHLyCOLKLig1zzC+DQkLLiUuocexuvdeQ==
+
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-1.1.2.tgz#b1665e2c461a2cd92f4c1bbf50d5454de0d4b421"
@@ -6465,6 +6470,13 @@ i18next@^20.3.2:
   integrity sha512-e8CML2R9Ng2sSQOM80wb/PrM2j8mDm84o/T4Amzn9ArVyNX5/ENWxxAXkRpZdTQNDaxKImF93Wep4mAoozFrKw==
   dependencies:
     "@babel/runtime" "^7.12.0"
+
+ic-webcomponents@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/ic-webcomponents/-/ic-webcomponents-0.0.1.tgz#c78099e081de26b97df4455e6fb89442786ea16a"
+  integrity sha512-BbdW+8mzeHm8RvysjwqmF8kFgMBD5z+8iiwDqhvG0JzC1TU46QyxCSeWPh1Ij7x7w3HAc7xqrTBpxlOF3fQ7Tg==
+  dependencies:
+    "@stencil/core" "^2.0.1"
 
 iconv-lite@0.4.24, iconv-lite@^0.4.24, iconv-lite@^0.4.4:
   version "0.4.24"
