@@ -1,25 +1,20 @@
 import * as React from "react"
 import { PageProps } from "gatsby"
 import {
-  Link as TLink,
   useTranslation
 } from "gatsby-plugin-react-i18next"
 
 import {
   Div,
-  Footer,
   Section,
   H2,
-  H3,
-  Paragraph,
-  List,
-  ListItem
+  H3
 } from "../../components"
 
 import {
   Layout,
   Main,
-  Nav,
+  MainFooter,
   MainHeader
 } from "../../modules"
 
@@ -32,20 +27,6 @@ export function AboutPage(props: PageProps) {
     <Main responsive fullWidth>
       <MainHeader />
 
-      <Nav>
-        <List>
-          <ListItem>
-            <TLink to="/">{t("Home")}</TLink>
-          </ListItem>
-          <ListItem>
-            <TLink to={`/${t("about")}`}>{t("About")}</TLink>
-          </ListItem>
-          <ListItem>
-            <TLink to={`/${t("contact")}`}>{t("Contact")}</TLink>
-          </ListItem>
-        </List>
-      </Nav>
-
       <Section id="about-page">
         <Div>
           <H2 className="text-align-center">{t("About")}</H2>
@@ -55,9 +36,7 @@ export function AboutPage(props: PageProps) {
           <H3 className="text-align-center">{t("Biography")}</H3>
         </Div>
       </Section>
-      <Footer>
-        <Paragraph>{t("Izac Cavalheiro")}, { year }. </Paragraph>
-      </Footer>
+      <MainFooter />
     </Main>
   </Layout>
 }
