@@ -5,15 +5,17 @@ export const StyledMain = styled.main`
     props => props.responsive && props.fullWidth && `display: grid;
     grid-template-areas:
       'header'
-      'nav'
       'section'
       'footer';
-    grid-gap: 1rem;`
+    grid-gap: 1rem;
+    grid-template-rows: 8rem auto 3rem;
+    `
   }
 
   padding: 1rem;
   max-width: calc(100% - 2rem);
   min-width: calc(100% - 2rem);
+  align-items: flex-start;
 
   > header {
     grid-area: header;
@@ -29,15 +31,6 @@ export const StyledMain = styled.main`
     }
   }
 
-  > nav {
-    grid-area: nav;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
   > section {
     grid-area: section;
     display: flex;
@@ -45,6 +38,7 @@ export const StyledMain = styled.main`
     justify-content: center;
     flex-direction: column;
     gap: 1rem;
+    flex: 1;
   }
 
   > footer {
@@ -54,5 +48,15 @@ export const StyledMain = styled.main`
     justify-content: center;
     flex-direction: column;
     gap: 1rem;
+    flex: 0;
+    max-height: 3rem;
+    min-height: 3rem;
+
+    > p {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 `
