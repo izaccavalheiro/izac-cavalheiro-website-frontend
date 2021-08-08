@@ -1,8 +1,6 @@
 import * as React from "react"
 import {
-  Link as TLink,
-  useTranslation,
-  useI18next
+  Link as TLink
 } from "gatsby-plugin-react-i18next"
 
 import { ComponentProps } from "../../components"
@@ -18,15 +16,48 @@ import {
   Wrapper
 } from "./styles"
 
-export const MainNav = (props: ComponentProps): React.ReactElement => {
+interface MainNavProps extends ComponentProps {
+  active: boolean
+  display: boolean
+}
+
+export const MainNav = (props: MainNavProps): React.ReactElement => {
   const {
-    current: currentLanguage,
-    data: languages,
-    handleChange: handleChangeLanguage,
     t
   } = useLanguages()
 
-  return <Wrapper>
+  const {
+    display,
+    active
+  } = props
+
+  const [mainClassesName, setMainClassesName] = React.useState('')
+
+  React.useEffect(() => {
+    console.warn('props: ', props)
+    
+    if (display && active) {
+      setMainClassesName('fixed')
+
+      return () => {
+      
+      }
+    }
+
+    setMainClassesName('')
+
+    return () => {
+
+    }
+  }, [
+    display,
+    active,
+    setMainClassesName
+  ])
+
+  console.warn('> ', mainClassesName)
+
+  return <Wrapper className={mainClassesName}>
     <List>
       <ListItem>
         <TLink to="/">{t("Home")}</TLink>
