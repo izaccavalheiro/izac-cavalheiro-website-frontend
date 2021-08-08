@@ -30,16 +30,20 @@ export const LanguageSelector = (props: LanguageSelectorProps): React.ReactEleme
     id
   }
 
+  const currentHref = `/${current === 'en' ? '' : current}`
+
   return (
     <Wrapper className={`language-selector ${className}`} {...persistProps}>
       <List>
-        {data.map((languageItem, index) => {
+        <ListItem className={`active`}>
+          <Link href={currentHref} title={`${current || 'en'}`}>{current || 'en'}</Link>
+        </ListItem>
+        {data.filter(filteredItem => ((filteredItem !== current && current) || !current && filteredItem !== 'en')).map((languageItem, index) => {
           const key = `language-selector-list-item-${index}`
-          const linkHref = languageItem !== "en" ? `/${languageItem}` : "/"
-          const language = current || "en"
+          const linkHref = `/${languageItem === 'en' ? '' : languageItem}`
 
-          return <ListItem key={key} className={`${language === languageItem ? "active" : ""}`}>
-            <Link href={linkHref} title={`${languageItem}`}>{languageItem}</Link>
+          return <ListItem key={key}>
+            <Link href={linkHref} title={`${languageItem || 'en'}`}>{languageItem || 'en'}</Link>
           </ListItem>
         })}
       </List>

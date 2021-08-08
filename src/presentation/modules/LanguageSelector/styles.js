@@ -11,16 +11,23 @@ export const Wrapper = styled.div`
     flex-direction: row;
     max-width: 100%;
     min-height: auto;
-    max-height: unset;
+    max-height: 4rem;
     justify-content: flex-end;
 
     ${fadeIn}
 
     > ul {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       list-style: inside none;
       gap: 1rem;
+      max-height: 4rem;
+      min-height: 4rem;
+      overflow: hidden;
+
+      &:hover {
+        max-height: unset;
+      }
 
       > li {
         background: #000;
@@ -33,26 +40,32 @@ export const Wrapper = styled.div`
         justify-content: center;
         border: 0rem none;
         box-sizing: border-box;
+        flex: 1;
+        cursor: pointer;
 
         &.active {
-          min-width: 3rem;
-          max-width: 3rem;
-          min-height: 3rem;
-          max-height: 3rem;
           background: #fff;
-          border: .5rem #000 solid;
-          box-sizing: unset;
 
           > a {
             color: #000;
+            border: .5rem #000 solid;
           }
         }
 
         > a {
+          flex: 1;
           text-decoration: none;
           color: #fff;
           text-transform: uppercase;
           font-size: 1rem;
+          min-width: 4rem;
+          max-width: 4rem;
+          min-height: 4rem;
+          max-height: 4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
         }
       }
     }
