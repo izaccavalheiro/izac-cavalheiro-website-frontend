@@ -8,23 +8,18 @@ import {
 
 import {
   Div,
-  Header,
   Footer,
   Section,
-  H1,
   H2,
   H3,
-  Paragraph,
-  List,
-  ListItem
+  Paragraph
 } from "../../components"
 
 import {
   Layout,
   Main,
-  Logo,
-  Nav,
-  LanguageSelector
+  MainNav,
+  MainHeader
 } from "../../modules"
 
 import { useLanguages } from "../../hooks"
@@ -34,35 +29,11 @@ export function NotFoundPage(props: PageProps) {
 
   const year = "2021"
 
-  const {
-    current: currentLanguage,
-    data: languages,
-    handleChange: handleChangeLanguage
-  } = useLanguages()
-
   return <Layout>
     <Main responsive fullWidth>
-      <Header>
-        <Logo size="large" />
+      <MainHeader />
 
-        <H1 className="text-align-center">{t("Izac Cavalheiro")}</H1>
-
-        <LanguageSelector current={currentLanguage} data={languages} handleUpdate={() => handleChangeLanguage} />
-      </Header>
-
-      <Nav>
-        <List>
-          <ListItem>
-            <TLink to="/">{t("Home")}</TLink>
-          </ListItem>
-          <ListItem>
-            <TLink to="/NotFound">{t("About")}</TLink>
-          </ListItem>
-          <ListItem>
-            <TLink to="/contact">{t("Contact")}</TLink>
-          </ListItem>
-        </List>
-      </Nav>
+      <MainNav />
 
       <Section id="about-page">
         <Div>
