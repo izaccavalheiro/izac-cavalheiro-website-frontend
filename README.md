@@ -7,9 +7,9 @@
   Izac Cavalheiro
 </h1>
 
-## 🚀 Quick start
+## 🚀 Personal website
 
-1.  **Start developing.**
+1.  **Development**
 
     Navigate into your new site’s directory and start it up.
 
