@@ -14,33 +14,51 @@ export const Wrapper = styled(Header)`
     gap: 1rem;
     min-width: 100%;
     max-width: 100%;
+    max-height: 18rem;
 
     > h1 {
       margin-bottom: 0;
     }
 
     > div {
-      min-width: 100%;
-
       &.top {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
         gap: 1rem;
+        max-height: 4rem;
+        min-width: 100%;
       }
+    }
+
+    ic-menu-toggle {
+      flex: none;
+    }
+
+    .language-selector {
+      flex: none;
+    }
+
+    .logo {
+      max-width: 4rem;
+      min-width: 4rem;
+      max-height: unset;
+      min-height: unset;
     }
   }
 
   @media(min-width: 20rem) {
-    
-  }
-
-  @media(min-width: 60rem) {
     > div {
       &.top {
         flex-direction: row;
       }
+    }
+  }
+
+  @media(min-width: 60rem) {
+    ic-menu-toggle {
+      display: none;
     }
   }
 `
