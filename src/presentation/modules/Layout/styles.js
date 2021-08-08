@@ -8,15 +8,14 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    min-height: 100%;
+    height: 100%;
     min-width: 100%;
     max-width: 100%;
+    font-size: 100%;
   }
   
   body {
     background-color: #fff;
-    min-height: 100%;
-    max-height: 100%;
     height: 100%;
     min-width: 100%;
     max-width: 100%;
@@ -28,7 +27,6 @@ export const GlobalStyle = createGlobalStyle`
     max-height: 100%;
     min-width: 100%;
     max-width: 100%;
-    display: flex;
-    
+    display: flex; 
   }
 `
