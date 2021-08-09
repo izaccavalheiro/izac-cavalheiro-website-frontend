@@ -37,7 +37,7 @@ export const Wrapper = styled(Nav)`
         align-items: center;
         color: #000;
         transition: .25s ease-in;
-        padding: 0 1rem;
+        padding: 0 .75rem;
         font-size: 1.25rem;
 
         &:hover {
@@ -49,7 +49,10 @@ export const Wrapper = styled(Nav)`
   }
 
   &.fixed {
-    
+    position: absolute;
+    left: 1rem;
+    top: 6rem;
+    display: flex;
   }
 
   @media(min-width: 20rem) {
@@ -57,6 +60,10 @@ export const Wrapper = styled(Nav)`
   }
 
   @media(min-width: 60rem) {
-    display: flex;
+    &.fixed {
+      position: relative;
+      left: auto;
+      top: auto;
+    }
   }
 `
