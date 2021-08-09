@@ -6,9 +6,8 @@ import {
 
 import {
   Div,
-  Footer,
+  H1,
   Section,
-  H2,
   Paragraph
 } from "../../components"
 
@@ -28,9 +27,9 @@ export function HomePage(props: PageProps) {
 
       <Section id="home-page">
         <Div>
-          <H2 className="text-align-center">{t("Hello World")} <br /> {t("Welcome")}</H2>
+          <H1 className="text-align-center">{t("Presentation")}</H1>
 
-          <Paragraph className="text-align-center">{t("HomeText")}</Paragraph>
+          <Paragraph className="text-align-center">{t("ExtraPresentation")}</Paragraph>
         </Div>
       </Section>
 
