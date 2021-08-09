@@ -48,7 +48,5 @@ export const MainHeader = (props: ComponentProps): React.ReactElement => {
 
       <ic-menu-toggle active={menuToggle} onClick={handleMenuToggleClick}></ic-menu-toggle>
     </Div>
-
-    <H1 className="text-align-center">{t("Izac Cavalheiro")}</H1>
   </Wrapper>
 }
