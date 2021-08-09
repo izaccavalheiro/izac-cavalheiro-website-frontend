@@ -8,7 +8,7 @@ export const StyledMain = styled.main`
       'section'
       'footer';
     grid-gap: 1rem;
-    grid-template-rows: 8rem auto 3rem;
+    grid-template-rows: auto auto 3rem;
     `
   }
 
