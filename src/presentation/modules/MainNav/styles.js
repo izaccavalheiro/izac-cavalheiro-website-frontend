@@ -14,6 +14,21 @@ export const Wrapper = styled(Nav)`
   min-height: 4rem;
   display: none;
 
+  &.dark-mode {
+    > ul {
+      > li {
+        a {
+          color: #fff;
+
+          &:hover {
+            background: #fff;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+
   > ul {
     flex: 1;
     justify-content: flex-start;
@@ -23,10 +38,10 @@ export const Wrapper = styled(Nav)`
     > li {
       display: flex;
       justify-content: center;
-      align-items: center;flex: 1;
+      align-items: center;
+      flex: 1;
       min-width: unset;
       min-height: 4rem;
-      flex: none;
       box-sizing: border-box;
 
       > a {
@@ -39,6 +54,7 @@ export const Wrapper = styled(Nav)`
         transition: .25s ease-in;
         padding: 0 .75rem;
         font-size: 1.25rem;
+        justify-content: center;
 
         &:hover {
           background: #000;
@@ -53,10 +69,23 @@ export const Wrapper = styled(Nav)`
     left: 1rem;
     top: 6rem;
     display: flex;
+    min-width: calc(100% - 2rem);
+
+    > ul {
+      min-width: 100%;
+    }
   }
 
-  @media(min-width: 20rem) {
-    
+  @media(min-width: 35rem) {
+    display: flex;
+
+    > ul {
+      align-items: flex-start;
+
+      > li {
+        flex: none;
+      }
+    }
   }
 
   @media(min-width: 60rem) {

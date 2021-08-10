@@ -2,6 +2,7 @@ import * as React from "react"
 import {
   Link as TLink
 } from "gatsby-plugin-react-i18next"
+import { connect } from "react-redux"
 
 import { ComponentProps } from "../../components"
 
@@ -16,35 +17,35 @@ import {
   Wrapper
 } from "./styles"
 
-interface MainNavProps extends ComponentProps {
+interface MainNavComponentProps extends ComponentProps {
   active: boolean
   display: boolean
+  darkMode?: boolean
 }
 
-export const MainNav = (props: MainNavProps): React.ReactElement => {
+export const MainNavComponent = (props: MainNavComponentProps): React.ReactElement => {
   const {
     t
   } = useLanguages()
 
   const {
     display,
-    active
+    active,
+    darkMode
   } = props
 
   const [mainClassesName, setMainClassesName] = React.useState('')
 
   React.useEffect(() => {
-    console.warn('props: ', props)
-    
     if (display && active) {
-      setMainClassesName('fixed')
+      setMainClassesName(`${darkMode ? 'dark-mode' : ''} fixed`)
 
       return () => {
       
       }
     }
 
-    setMainClassesName('')
+    setMainClassesName(`${darkMode ? 'dark-mode' : ''}`)
 
     return () => {
 
@@ -52,10 +53,9 @@ export const MainNav = (props: MainNavProps): React.ReactElement => {
   }, [
     display,
     active,
+    darkMode,
     setMainClassesName
   ])
-
-  console.warn('> ', mainClassesName)
 
   return <Wrapper className={mainClassesName}>
     <List>
@@ -71,3 +71,9 @@ export const MainNav = (props: MainNavProps): React.ReactElement => {
     </List>
   </Wrapper>
 }
+
+const mapStateToProps = ({ darkMode }) => {
+  return { darkMode }
+}
+
+export const MainNav = connect(mapStateToProps, {})(MainNavComponent)
