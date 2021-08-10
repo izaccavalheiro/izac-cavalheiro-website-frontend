@@ -61,7 +61,7 @@ export const Wrapper = styled(Header)`
     }
   }
 
-  @media(min-width: 60rem) {
+  @media(min-width: 35rem) {
     ic-menu-toggle {
       display: none;
     }
