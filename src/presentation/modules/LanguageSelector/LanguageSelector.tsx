@@ -1,4 +1,5 @@
 import * as React from "react"
+import { connect } from "react-redux"
 
 import {ComponentProps} from "../../components"
 
@@ -16,14 +17,16 @@ interface LanguageSelectorProps extends ComponentProps {
   current?: string
   data?: any
   handleUpdate?: () => void
+  darkMode?: boolean
 }
 
-export const LanguageSelector = (props: LanguageSelectorProps): React.ReactElement => {
+export const LanguageSelectorComponent = (props: LanguageSelectorProps): React.ReactElement => {
   const {
     className = "",
     id,
     data,
-    current
+    current,
+    darkMode
   } = props
 
   const persistProps = {
@@ -32,8 +35,10 @@ export const LanguageSelector = (props: LanguageSelectorProps): React.ReactEleme
 
   const currentHref = `/${current === 'en' ? '' : current}`
 
+  const newClassName = `language-selector ${className} ${darkMode ? 'dark-mode' : ''}`
+
   return (
-    <Wrapper className={`language-selector ${className}`} {...persistProps}>
+    <Wrapper className={newClassName} {...persistProps}>
       <List>
         <ListItem className={`active`}>
           <Link href={currentHref} title={`${current || 'en'}`}>{current || 'en'}</Link>
@@ -50,3 +55,9 @@ export const LanguageSelector = (props: LanguageSelectorProps): React.ReactEleme
     </Wrapper>
   )
 }
+
+const mapStateToProps = ({ darkMode }) => {
+  return { darkMode }
+}
+
+export const LanguageSelector = connect(mapStateToProps, {})(LanguageSelectorComponent)
