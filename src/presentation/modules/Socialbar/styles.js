@@ -20,10 +20,10 @@ export const Wrapper = styled(List)`
       display: flex;
       align-items: center;
       justify-content: center;
-      max-height: 1.5rem;
-      min-height: 1.5rem;
-      max-width: 1.5rem;
-      min-width: 1.5rem;
+      max-height: 1.2rem;
+      min-height: 1.2rem;
+      max-width: 1.2rem;
+      min-width: 1.2rem;
 
       > ic-socialnetwork {
         min-width: 100%;

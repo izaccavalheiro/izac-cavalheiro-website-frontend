@@ -51,8 +51,8 @@ export const Wrapper = styled(Section)`
 
   @media(min-width: 20rem) {
     > div {
-      max-width: 90%;
-      min-width: 90%;
+      max-width: 100%;
+      min-width: 100%;
 
       > h1 {
         font-size: 1.5rem;
@@ -66,8 +66,8 @@ export const Wrapper = styled(Section)`
 
   @media(min-width: 30rem) {
     > div {
-      max-width: 80%;
-      min-width: 80%;
+      max-width: 100%;
+      min-width: 100%;
 
       > h1 {
         font-size: 2rem;
