@@ -7,9 +7,12 @@ import { ComponentProps } from '../../../components/Default'
 
 import {
   Div,
-  H1,
-  Paragraph
+  H1
 } from "../../../components"
+
+import{
+  ParagraphText
+} from '../../../modules'
 
 import {
   Wrapper
@@ -17,14 +20,6 @@ import {
 
 interface SectionProps extends ComponentProps {
   
-}
-
-const ParagraphText = ({text}) => {
-  const textParts = text.split('\r\n')
-
-  return textParts && textParts.filter(textPartItem => !!textPartItem).map((textPartItem) => {
-    return <Paragraph className="text-align-center">{textPartItem}</Paragraph>
-  })
 }
 
 export function Section(props: SectionProps) {
@@ -44,7 +39,7 @@ export function Section(props: SectionProps) {
     <Div>
       <H1 className="text-align-center">{t("Presentation")}</H1>
 
-      <ParagraphText text={t("ExtraPresentation")} />
+      <ParagraphText text={t("PresentationText")} />
     </Div>
   </Wrapper>
 }
