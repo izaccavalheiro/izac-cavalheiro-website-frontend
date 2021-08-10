@@ -33,11 +33,13 @@
     "gatsby-transformer-remark": "^4.5.0",
     "gatsby-transformer-sharp": "^3.8.0",
     "i18next": "^20.3.2",
-    "ic-webcomponents": "^0.0.1",
+    "ic-webcomponents": "^0.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-i18next": "^11.11.1",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.1",
     "styled-components": "^5.3.0"
   }
 }
