@@ -3,40 +3,41 @@ import { PageProps } from "gatsby"
 import {
   useTranslation
 } from "gatsby-plugin-react-i18next"
-
-import {
-  Div,
-  Section,
-  H2,
-  H3
-} from "../../components"
+import { connect } from "react-redux"
 
 import {
   Layout,
   Main,
-  MainFooter,
-  MainHeader
+  MainHeader,
+  MainFooter
 } from "../../modules"
 
-export function AboutPage(props: PageProps) {
-  const {t} = useTranslation()
+import {
+  Section
+} from "./Section"
 
-  const year = "2021"
+interface AboutComponentProps extends PageProps {
+  darkMode?: boolean
+}
+
+export function AboutComponent(props: AboutComponentProps) {
+  const {
+    darkMode
+  } = props
 
   return <Layout>
     <Main responsive fullWidth>
       <MainHeader />
 
-      <Section id="about-page">
-        <Div>
-          <H2 className="text-align-center">{t("About")}</H2>
+      <Section id="about-page" className={`${darkMode ? 'dark-mode' : ''}`} />
 
-          <H3 className="text-align-center">{t("Summary")}</H3>
-
-          <H3 className="text-align-center">{t("Biography")}</H3>
-        </Div>
-      </Section>
       <MainFooter />
     </Main>
   </Layout>
 }
+
+const mapStateToProps = ({ darkMode }) => {
+  return { darkMode }
+}
+
+export const About = connect(mapStateToProps, {})(AboutComponent)
