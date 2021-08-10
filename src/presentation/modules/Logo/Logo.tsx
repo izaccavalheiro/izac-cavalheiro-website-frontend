@@ -1,6 +1,8 @@
 import * as React from "react"
+import { connect } from "react-redux"
 
 import logoSource from "./../../assets/images/logo-izac-cavalheiro.png"
+import darkModeLogoSource from "./../../assets/images/logo-izac-cavalheiro-inverted.png"
 
 import { ComponentProps } from "../../components"
 
@@ -16,13 +18,15 @@ interface LogoProps extends ComponentProps {
   href?: string
   target?: string
   size?: string
+  darkMode?: boolean
 }
 
-export const Logo = (props: LogoProps): React.ReactElement => {
+export const LogoComponent = (props: LogoProps): React.ReactElement => {
   const {
     className,
     href,
-    size
+    size,
+    darkMode
   } = props
 
   const persistProps = {
@@ -32,7 +36,13 @@ export const Logo = (props: LogoProps): React.ReactElement => {
 
   return (
     <Wrapper className={`logo ${className}`} {...persistProps}>
-      <Image src={logoSource} />
+      <Image src={darkMode ? darkModeLogoSource : logoSource} />
     </Wrapper>
   )
 }
+
+const mapStateToProps = ({ darkMode }) => {
+  return { darkMode }
+}
+
+export const Logo = connect(mapStateToProps, {})(LogoComponent)
