@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { fadeIn } from '../../styles'
+
 export const StyledMain = styled.main`
   ${
     props => props.responsive && props.fullWidth && `display: grid;
@@ -16,19 +18,12 @@ export const StyledMain = styled.main`
   max-width: calc(100% - 2rem);
   min-width: calc(100% - 2rem);
   align-items: flex-start;
+  background: #fff;
 
-  > header {
-    grid-area: header;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    min-width: 100%;
-    max-width: 100%;
+  ${fadeIn}
 
-    > h1 {
-      margin-bottom: 0;
-    }
+  &.dark-mode {
+    background: #000;
   }
 
   > section {
@@ -39,24 +34,5 @@ export const StyledMain = styled.main`
     flex-direction: column;
     gap: 1rem;
     flex: 1;
-  }
-
-  > footer {
-    grid-area: footer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1rem;
-    flex: 0;
-    max-height: 3rem;
-    min-height: 3rem;
-
-    > p {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
   }
 `

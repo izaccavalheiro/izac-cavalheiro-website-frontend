@@ -1,4 +1,5 @@
 import * as React from "react"
+import { connect } from "react-redux"
 
 import {ComponentProps} from "../../components"
 
@@ -7,14 +8,17 @@ import {StyledMain} from "./styles"
 interface MainProps extends ComponentProps {
   responsive: boolean
   fullWidth: boolean
+  darkMode: boolean
 }
 
-export const Main = (props: MainProps): React.ReactElement => {
+export const MainComponent = (props: MainProps): React.ReactElement => {
   const {
     children,
     fullWidth,
     responsive,
-    id
+    id,
+    className,
+    darkMode
   } = props
 
   const persistProps = {
@@ -23,7 +27,15 @@ export const Main = (props: MainProps): React.ReactElement => {
     fullWidth
   }
 
+  const newClassName = `${className} ${darkMode ? 'dark-mode' : ''}`
+
   return (
-    <StyledMain {...persistProps}>{children}</StyledMain>
+    <StyledMain {...persistProps} className={newClassName}>{children}</StyledMain>
   )
 }
+
+const mapStateToProps = ({ darkMode }) => {
+  return { darkMode }
+}
+
+export const Main = connect(mapStateToProps, {})(MainComponent)
