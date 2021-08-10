@@ -13,6 +13,10 @@ export const Wrapper = styled(Section)`
         color: #fff;
       }
 
+      > h2 {
+        color: #fff;
+      }
+
       > p {
         color: #fff;
       }
@@ -29,7 +33,7 @@ export const Wrapper = styled(Section)`
     justify-content: flex-start;
     align-items: flex-start;
 
-    > h1 {
+    > h1, > h2 {
       color: #000;
       font-size: 2rem;
 
