@@ -1,4 +1,5 @@
 import * as React from "react"
+import { connect } from "react-redux"
 
 import {
   ComponentProps,
@@ -9,14 +10,28 @@ import {
   Wrapper
 } from "./styles"
 
-export const Socialbar = (props: ComponentProps): React.ReactElement => {
+interface SocialbarComponentProps extends ComponentProps {
+  darkMode?: boolean
+}
+
+export const SocialbarComponent = (props: SocialbarComponentProps): React.ReactElement => {
+  const {
+    darkMode
+  } = props
+
   return <Wrapper>
-    <ListItem><ic-social-network name="twitter"></ic-social-network></ListItem>
-    <ListItem><ic-social-network name="facebook"></ic-social-network></ListItem>
-    <ListItem><ic-social-network name="linkedin"></ic-social-network></ListItem>
-    <ListItem><ic-social-network name="instagram"></ic-social-network></ListItem>
-    <ListItem><ic-social-network name="medium"></ic-social-network></ListItem>
-    <ListItem><ic-social-network name="codesandbox"></ic-social-network></ListItem>
-    <ListItem><ic-social-network name="github"></ic-social-network></ListItem>
+    <ListItem><ic-social-network name="twitter" dark-mode={!!darkMode}></ic-social-network></ListItem>
+    <ListItem><ic-social-network name="facebook" dark-mode={!!darkMode}></ic-social-network></ListItem>
+    <ListItem><ic-social-network name="linkedin" dark-mode={!!darkMode}></ic-social-network></ListItem>
+    <ListItem><ic-social-network name="instagram" dark-mode={!!darkMode}></ic-social-network></ListItem>
+    <ListItem><ic-social-network name="medium" dark-mode={!!darkMode}></ic-social-network></ListItem>
+    <ListItem><ic-social-network name="codesandbox" dark-mode={!!darkMode}></ic-social-network></ListItem>
+    <ListItem><ic-social-network name="github" dark-mode={!!darkMode}></ic-social-network></ListItem>
   </Wrapper>
 }
+
+const mapStateToProps = ({ darkMode }) => {
+  return { darkMode }
+}
+
+export const Socialbar = connect(mapStateToProps, {})(SocialbarComponent)
