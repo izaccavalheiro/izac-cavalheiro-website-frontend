@@ -4,7 +4,10 @@ import {
   Section
 } from "../../../components"
 
-import { fadeIn } from '../../../styles'
+import {
+  fadeIn,
+  slideUp
+} from '../../../styles'
 
 export const Wrapper = styled(Section)`
   &.dark-mode {
@@ -15,6 +18,10 @@ export const Wrapper = styled(Section)`
 
       > p {
         color: #fff;
+
+        > a {
+          color: #fff;
+        }
       }
     }
   }
@@ -22,8 +29,6 @@ export const Wrapper = styled(Section)`
   ${fadeIn}
 
   > div {
-    max-width: 95%;
-    min-width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,7 +38,7 @@ export const Wrapper = styled(Section)`
       color: #000;
       font-size: 2rem;
 
-      ${fadeIn}
+      ${slideUp}
     }
 
     > p {
@@ -41,10 +46,12 @@ export const Wrapper = styled(Section)`
       margin-bottom: 1rem;
       font-size: 1rem;
 
-      ${fadeIn}
+      ${slideUp}
 
       > a {
         color: #000;
+
+        ${fadeIn}
       }
     }
   }

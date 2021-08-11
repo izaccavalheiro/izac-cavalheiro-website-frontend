@@ -21,11 +21,13 @@ interface ContactComponentProps extends PageProps {
 }
 
 export function ContactComponent(props: ContactComponentProps) {
+  const {t} = useTranslation()
+
   const {
     darkMode
   } = props
 
-  return <Layout>
+  return <Layout pageTitle={t('ContactPageTitle')}>
     <Main responsive fullWidth>
       <MainHeader />
 
