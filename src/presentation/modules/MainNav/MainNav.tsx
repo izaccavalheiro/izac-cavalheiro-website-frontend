@@ -11,7 +11,9 @@ import {
   ListItem
 } from "../../components"
 
-import { useLanguages } from "../../hooks"
+import {
+  useLanguages
+} from "../../hooks"
 
 import {
   Wrapper
@@ -21,6 +23,7 @@ interface MainNavComponentProps extends ComponentProps {
   active: boolean
   display: boolean
   darkMode?: boolean
+  currentPath?: string
 }
 
 export const MainNavComponent = (props: MainNavComponentProps): React.ReactElement => {
@@ -31,7 +34,8 @@ export const MainNavComponent = (props: MainNavComponentProps): React.ReactEleme
   const {
     display,
     active,
-    darkMode
+    darkMode,
+    currentPath
   } = props
 
   const [mainClassesName, setMainClassesName] = React.useState('')
@@ -57,15 +61,17 @@ export const MainNavComponent = (props: MainNavComponentProps): React.ReactEleme
     setMainClassesName
   ])
 
+  console.warn('currentPath:', currentPath)
+
   return <Wrapper className={mainClassesName}>
     <List>
-      <ListItem>
+      <ListItem className={currentPath === '/' ? 'active' : ''}>
         <TLink to="/">{t("Home")}</TLink>
       </ListItem>
-      <ListItem>
+      <ListItem className={currentPath === '/about/' ? 'active' : ''}>
         <TLink to="/about">{t("About")}</TLink>
       </ListItem>
-      <ListItem>
+      <ListItem className={currentPath === '/contact/' ? 'active' : ''}>
         <TLink to="/contact">{t("Contact")}</TLink>
       </ListItem>
     </List>

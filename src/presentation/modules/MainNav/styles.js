@@ -44,6 +44,13 @@ export const Wrapper = styled(Nav)`
       min-height: 4rem;
       box-sizing: border-box;
 
+      &.active {
+        > a {
+          background: #000;
+          color: #fff;
+        }
+      }
+
       > a {
         flex: 1;
         min-width: unset;
