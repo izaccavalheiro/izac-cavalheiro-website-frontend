@@ -11,12 +11,13 @@ import {data} from "../../../data"
 interface LayoutProps extends ComponentProps {
   darkMode?: boolean
   darkModeToggle?: () => void
+  pageTitle?: string
 }
 
 const LayoutComponent = (props: LayoutProps): React.ReactElement => {
   const {
     children,
-    darkMode
+    pageTitle
   } = props
 
   return (
@@ -24,6 +25,8 @@ const LayoutComponent = (props: LayoutProps): React.ReactElement => {
       <GlobalStyle />
 
       <Helmet>
+        <title>{pageTitle}</title>
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
@@ -31,7 +34,7 @@ const LayoutComponent = (props: LayoutProps): React.ReactElement => {
         <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.4.3/webcomponents-loader.js"></script>
         <script type="module"
           async
-          src="https://unpkg.com/ic-webcomponents@0.0.9/dist/ic-webcomponents/ic-webcomponents.esm.js"
+          src="https://unpkg.com/ic-webcomponents@0.0.10/dist/ic-webcomponents/ic-webcomponents.esm.js"
         ></script>
 
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${data.vendor.google.gtmId}`}></script>

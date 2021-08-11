@@ -21,12 +21,17 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 100%;
   }
 
-  #___gatsby,
-  #___gatsby > div {
+  #___gatsby {
     min-height: 100%;
-    max-height: 100%;
     min-width: 100%;
     max-width: 100%;
     display: flex; 
+  }
+
+  #___gatsby > div {
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
   }
 `
