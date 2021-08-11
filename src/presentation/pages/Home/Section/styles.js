@@ -4,9 +4,14 @@ import {
   Section
 } from "../../../components"
 
-import { fadeIn } from '../../../styles'
+import {
+  fadeIn,
+  slideUp
+} from '../../../styles'
 
 export const Wrapper = styled(Section)`
+  overflow-wrap: anywhere;
+
   &.dark-mode {
     > div {
       > h1 {
@@ -22,18 +27,15 @@ export const Wrapper = styled(Section)`
   ${fadeIn}
 
   > div {
-    max-width: 95%;
-    min-width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
     > h1 {
       color: #000;
-      font-size: 2rem;
 
-      ${fadeIn}
+      ${slideUp}
     }
 
     > p {
@@ -41,36 +43,25 @@ export const Wrapper = styled(Section)`
       margin-bottom: 1rem;
       font-size: 1rem;
 
-      ${fadeIn}
+      ${slideUp}
     }
   }
 
   @media(min-width: 20rem) {
     > div {
-      max-width: 90%;
-      min-width: 90%;
-
-      > h1 {
-        font-size: 1.5rem;
-      }
-
-      > p {
-        font-size: 1rem;
-      }
     }
   }
 
   @media(min-width: 30rem) {
     > div {
-      max-width: 80%;
-      min-width: 80%;
-
       > h1 {
         font-size: 2rem;
+        line-height: 2rem;
       }
 
       > p {
         font-size: 1.5rem;
+        line-height: 1.75rem;
       }
     }
   }

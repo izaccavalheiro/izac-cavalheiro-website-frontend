@@ -6,12 +6,11 @@ import {
 import { ComponentProps } from '../../../components/Default'
 
 import {
-  Div,
-  H1
+  Div
 } from "../../../components"
 
 import{
-  ParagraphText
+  Typography
 } from '../../../modules'
 
 import {
@@ -37,9 +36,9 @@ export function Section(props: SectionProps) {
 
   return <Wrapper {...persistProps}>
     <Div>
-      <H1 className="text-align-center">{t("Presentation")}</H1>
+      <Typography tag={'h1'} text={t("Presentation")} className="text-align-center" />
 
-      <ParagraphText text={t("PresentationText")} />
+      <Typography tag={'p'} text={t("PresentationText")} />
     </Div>
   </Wrapper>
 }
