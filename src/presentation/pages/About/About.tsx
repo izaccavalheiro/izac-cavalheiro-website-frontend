@@ -21,19 +21,23 @@ interface AboutComponentProps extends PageProps {
 }
 
 export function AboutComponent(props: AboutComponentProps) {
+  const {t} = useTranslation()
+
   const {
     darkMode
   } = props
 
-  return <Layout>
-    <Main responsive fullWidth>
-      <MainHeader />
+  return <>
+    <Layout pageTitle={t('AboutPageTitle')}>
+      <Main responsive fullWidth>
+        <MainHeader />
 
-      <Section id="about-page" className={`${darkMode ? 'dark-mode' : ''}`} />
+        <Section id="about-page" className={`${darkMode ? 'dark-mode' : ''}`} />
 
-      <MainFooter />
-    </Main>
-  </Layout>
+        <MainFooter />
+      </Main>
+    </Layout>
+  </>
 }
 
 const mapStateToProps = ({ darkMode }) => {
