@@ -35,7 +35,7 @@ export const MainNavComponent = (props: MainNavComponentProps): React.ReactEleme
     display,
     active,
     darkMode,
-    currentPath
+    currentPath = ''
   } = props
 
   const [mainClassesName, setMainClassesName] = React.useState('')
