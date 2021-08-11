@@ -13,7 +13,7 @@ export const Wrapper = styled(Header)`
   gap: 1rem;
   min-width: 100%;
   max-width: 100%;
-  max-height: 18rem;
+  z-index: 1;
 
   > h1 {
     margin-bottom: 0;
@@ -27,6 +27,7 @@ export const Wrapper = styled(Header)`
       justify-content: space-between;
       gap: 1rem;
       min-width: 100%;
+      max-height: 4rem;
     }
   }
 
