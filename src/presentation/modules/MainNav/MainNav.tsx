@@ -61,8 +61,6 @@ export const MainNavComponent = (props: MainNavComponentProps): React.ReactEleme
     setMainClassesName
   ])
 
-  console.warn('currentPath:', currentPath)
-
   return <Wrapper className={mainClassesName}>
     <List>
       <ListItem className={currentPath.indexOf('/about') <  0 && currentPath.indexOf('/contact') < 0 ? 'active' : ''}>
