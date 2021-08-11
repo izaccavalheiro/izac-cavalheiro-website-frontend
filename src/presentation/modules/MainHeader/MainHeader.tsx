@@ -25,6 +25,8 @@ import { darkModeToggle } from "../../state/actions"
 
 interface MainHeaderProps extends ComponentProps {
   darkModeToggle: () => void
+  darkMode?: string
+  currentPath: string
 }
 
 export const MainHeaderComponent = (props: MainHeaderProps): React.ReactElement => {
@@ -37,7 +39,8 @@ export const MainHeaderComponent = (props: MainHeaderProps): React.ReactElement 
 
   const {
     darkModeToggle: darkModeToggleFn,
-    darkMode
+    darkMode,
+    currentPath
   } = props
 
   const [menuToggle, setMenuToggle] = React.useState(false)
@@ -56,7 +59,7 @@ export const MainHeaderComponent = (props: MainHeaderProps): React.ReactElement 
     <Div className="top">
       <Logo size="large" />
 
-      <MainNav active={menuToggle} display={menuToggle} />
+      <MainNav currentPath={currentPath} active={menuToggle} display={menuToggle} />
 
       <LanguageSelector current={!languages.includes(currentLanguage) ? 'en' : currentLanguage} data={languages} handleUpdate={() => handleChangeLanguage} />
 
