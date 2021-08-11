@@ -12,8 +12,7 @@ export const Wrapper = styled(Footer)`
   flex-direction: column;
   gap: 1rem;
   flex: 0;
-  min-height: 3rem;
-  padding-bottom: 2rem;
+  align-self: flex-end;
 
   > p {
     flex: 1;
