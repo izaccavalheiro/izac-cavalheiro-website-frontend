@@ -17,6 +17,13 @@ export const Wrapper = styled(Nav)`
   &.dark-mode {
     > ul {
       > li {
+        &.active {
+          > a {
+            background: #fff;
+            color: #000;
+          }
+        }
+
         a {
           color: #fff;
 
