@@ -24,13 +24,14 @@ export function AboutComponent(props: AboutComponentProps) {
   const {t} = useTranslation()
 
   const {
-    darkMode
+    darkMode,
+    path
   } = props
 
   return <>
     <Layout pageTitle={t('AboutPageTitle')}>
       <Main responsive fullWidth>
-        <MainHeader />
+        <MainHeader currentPath={path} />
 
         <Section id="about-page" className={`${darkMode ? 'dark-mode' : ''}`} />
 

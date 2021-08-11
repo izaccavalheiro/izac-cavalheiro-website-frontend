@@ -24,12 +24,13 @@ export function ContactComponent(props: ContactComponentProps) {
   const {t} = useTranslation()
 
   const {
-    darkMode
+    darkMode,
+    path
   } = props
 
   return <Layout pageTitle={t('ContactPageTitle')}>
     <Main responsive fullWidth>
-      <MainHeader />
+      <MainHeader currentPath={path} />
 
       <Section id="contact-page" className={`${darkMode ? 'dark-mode' : ''}`} />
 
