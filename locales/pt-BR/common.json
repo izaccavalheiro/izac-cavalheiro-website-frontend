@@ -1,12 +1,9 @@
 {
   "Izac Cavalheiro": "Izac Cavalheiro",
-  "Presentation": "Olá, meu nome é Izac. Eu sou engenheiro de software.",
-  "ExtraPresentation": "Construo software para plataformas web e mobile desde 2002. \r\n Tenho experiência na construção de vários tipos de soluções: sites, aplicativos web, aplicativos móveis, bibliotecas de UI, SPA, PWA, comércio eletrônico, blogs, sistemas de gestão empresarial e outros desenvolvimentos personalizados.",
+  "Presentation": "Olá, meu nome é Izac. \n Sou engenheiro de software.",
   "Home": "Início",
   "About": "Sobre",
-  "about": "sobre",
   "Contact": "Contato",
-  "contato": "contato",
   "Hello World": "Olá mundo.",
   "Welcome": "Bem vindo!",
   "Social Network": "Redes Sociais",
@@ -17,7 +14,7 @@
   "Medium": "Medium",
   "StackOverflow": "StackOverflow",
   "CodeSandbox": "CodeSandbox",
-  "JSFiddle": "Bienvenido",
+  "JSFiddle": "JSFiddle",
   "Notion": "Notion",
   "Github": "Github",
   "Youtube": "Youtube"

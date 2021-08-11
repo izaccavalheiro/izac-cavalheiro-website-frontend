@@ -1,4 +1,7 @@
 {
-  "Contact": "Contact",
-  "ContactText": ""
+  "PageTitle": "Contáctame",
+  "Contact": "Contáctame",
+  "ContactText": "",
+  "ContactEmailLinkTitle": "Envíame un correo electrónico",
+  "ContactWhatsappLinkTitle": "Llamame por WhatsApp"
 }

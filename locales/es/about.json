@@ -1,6 +1,7 @@
 {
+  "PageTitle": "Sobre",
   "Summary": "Sumario",
-  "Summary Text": "Self-taught programmer, specialized in frontend solutions development, with background working on startups, tech companies, digital marketing and advertising agencies. Trying different languages and paradigms, especially: JS (ES and TS), Elixir, Dart and PHP.",
+  "SummaryText": "Self-taught programmer, specialized in frontend solutions development, with background working on startups, tech companies, digital marketing and advertising agencies. Trying different languages and paradigms, especially: JS (ES and TS), Elixir, Dart and PHP.",
   "Biography": "Biografia",
-  "Biography Text": "Desenvolvi meu primeiro website comercial quando tinha 14 anos e aos 16 anos trabalhava como freelancer para várias empresas (publicidade, marketing digital, turismo etc) em Campinas e região. \r\n Trabalhei principalmente para o mercado publicitário até 2012. \r\n Nesse mesmo ano comecei a prestar serviço para empresas de tecnologia. \r\n Atualmente, sou entusiasta de programação funcional e prefiro trabalhar com desenvolvimento frontend. Porém tenho grande experiência com desenvolvimento backend, devops e banco de dados."
+  "BiographyText": "Desenvolvi meu primeiro website comercial quando tinha 14 anos e aos 16 anos trabalhava como freelancer para várias empresas (publicidade, marketing digital, turismo etc) em Campinas e região. \r\n Trabalhei principalmente para o mercado publicitário até 2012. \r\n Nesse mesmo ano comecei a prestar serviço para empresas de tecnologia. \r\n Atualmente, sou entusiasta de programação funcional e prefiro trabalhar com desenvolvimento frontend. Porém tenho grande experiência com desenvolvimento backend, devops e banco de dados."
 }

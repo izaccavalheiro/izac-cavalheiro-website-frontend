@@ -1,6 +1,7 @@
 {
+  "AboutPageTitle": "Sobre",
   "Summary": "Resumo",
-  "SummaryText": "Sou programador, autodidata, especialista em desenvolvimento front-end, com experiência em startups e empresas de tecnologia. Tenho experiência com diferentes linguagens e paradigmas, principalmente: JS (ES e TS), Elixir, Dart e PHP.",
+  "SummaryText": "Sou um programador autodidata, especializado em front-end, com passagem por algumas startups e empresas de tecnologia. Tenho experiência com diferentes linguagens e paradigmas de programação, principalmente: JS (ES e TS), Dart, Elixir e PHP.",
   "Biography": "Biografia",
-  "BiographyText": "Desenvolvi meu primeiro website comercial quando tinha 14 anos, iniciando minha carreria como freelancer em empresas (agências de publicidade, marketing digital, turismo etc) de Campinas e região. \r\n Em 2012 comecei a prestar serviço para empresas de tecnologia (consultorias, startups etc) em São Paulo. \r\n Atualmente, sou entusiasta de programação funcional e prefiro trabalhar com desenvolvimento frontend, porém, também tenho bastante experiência com desenvolvimento backend, devops e banco de dados."
+  "BiographyText": "Desenvolvi meu primeiro website comercial quando tinha 14 anos e iniciei minha carreira trabalhando para agências de publicidade e marketing digital em Campinas. \r\n Em 2012 comecei a trabalhar para empresas de tecnologia, principalmente consultorias e startups. \r\n Hoje em dia sou um entusiasta de programação funcional e mesmo com foco em frontend também tenho conhecimento e experiência com backend, devops e banco de dados."
 }

@@ -1,4 +1,7 @@
 {
+  "ContactPageTitle": "Contact",
   "Contact": "Contact",
-  "ContactText": ""
+  "ContactText": "",
+  "ContactEmailLinkTitle": "Send an email for me",
+  "ContactWhatsappLinkTitle": "Call me on Whatsapp"
 }

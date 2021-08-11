@@ -1,11 +1,9 @@
 {
   "Izac Cavalheiro": "Izac Cavalheiro",
-  "Presentation": "Hi, my name is Izac. I'm a software engineer.",
+  "Presentation": "Hi, my name is Izac. \n I'm a software engineer.",
   "Home": "Home",
   "About": "About",
-  "about": "about",
   "Contact": "Contact",
-  "contact": "contact",
   "Hello World": "Hello world.",
   "Welcome": "Welcome!",
   "Social Network": "Social Network",
@@ -16,7 +14,7 @@
   "Medium": "Medium",
   "StackOverflow": "StackOverflow",
   "CodeSandbox": "CodeSandbox",
-  "JSFiddle": "Bienvenido",
+  "JSFiddle": "JSFiddle",
   "Notion": "Notion",
   "Github": "Github",
   "Youtube": "Youtube"
