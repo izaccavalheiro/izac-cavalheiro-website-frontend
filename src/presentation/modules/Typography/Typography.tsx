@@ -1,19 +1,43 @@
-import React from "react"
+import * as React from "react"
 
-import {ComponentProps} from "../../components"
+import {
+  Paragraph,
+  H1,
+  H2
+} from "../../components"
 
-import {Wrapper} from "./styles"
+export const Typography = ({text, tag = 'p'}) => {
+  const Element = ({children, tag}) => {
+    if (tag === 'p') {
+      return <Paragraph>{children}</Paragraph>
+    }
 
-interface TypographyProps extends ComponentProps {
-}
+    if (tag === 'h1') {
+      return <H1>{children}</H1>
+    }
 
-export const Typography = (props: TypographyProps) => {
-  const {children, className, id} = props
-
-  const persistProps = {
-    id,
-    className
+    if (tag === 'h2') {
+      return <H2>{children}</H2>
+    }
   }
 
-  return <Wrapper {...persistProps}>{children}</Wrapper>
+  if (text.indexOf('\r\n') >= 0) {
+    const textParts = text.split('\r\n')
+
+    return textParts && textParts.filter(textPartItem => !!textPartItem).map((textPartItem) => {
+      return <Element tag={tag}>{textPartItem}</Element>
+    })
+  }
+
+  if (text.indexOf('\n') >= 0) {
+    const textParts = text.split('\n')
+
+    const ParagraphBr = textParts && textParts.filter(textPartItem => !!textPartItem).map((textPartItem, index) => {
+      return <>{textPartItem} {index < textParts.length - 1 ? <br /> : null}</>
+    })
+
+    return <Element tag={tag}>{ParagraphBr}</Element>
+  }
+
+  return <Element tag={tag}>{text}</Element>
 }
