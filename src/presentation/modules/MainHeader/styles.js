@@ -27,7 +27,22 @@ export const Wrapper = styled(Header)`
       justify-content: space-between;
       gap: 1rem;
       min-width: 100%;
+      min-height: 4rem;
       max-height: 4rem;
+
+      &.show-nav {
+        min-height: 9rem;
+        max-height: 9rem;
+        align-items: flex-start;
+
+        > ic-switch {
+          transform: translateY(1rem);
+        }
+
+        > ic-menu-toggle {
+          transform: translateY(1rem);
+        }
+      }
     }
   }
 
