@@ -65,13 +65,13 @@ export const MainNavComponent = (props: MainNavComponentProps): React.ReactEleme
 
   return <Wrapper className={mainClassesName}>
     <List>
-      <ListItem className={currentPath === '/' ? 'active' : ''}>
+      <ListItem className={currentPath.indexOf('/about') <  0 && currentPath.indexOf('/contact') < 0 ? 'active' : ''}>
         <TLink to="/">{t("Home")}</TLink>
       </ListItem>
-      <ListItem className={currentPath === '/about/' ? 'active' : ''}>
+      <ListItem className={currentPath.indexOf('/about') >= 0 ? 'active' : ''}>
         <TLink to="/about">{t("About")}</TLink>
       </ListItem>
-      <ListItem className={currentPath === '/contact/' ? 'active' : ''}>
+      <ListItem className={currentPath.indexOf('/contact') >= 0 ? 'active' : ''}>
         <TLink to="/contact">{t("Contact")}</TLink>
       </ListItem>
     </List>

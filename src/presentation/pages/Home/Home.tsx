@@ -27,6 +27,8 @@ export function HomeComponent(props: HomeComponentProps) {
     darkMode,
     path
   } = props
+  
+  console.warn('props: ', props)
 
   return <Layout pageTitle={t('IndexPageTitle')}>
     <Main responsive fullWidth>
