@@ -10,15 +10,16 @@ export const StyledMain = styled.main`
       'section'
       'footer';
     grid-gap: 1rem;
-    grid-template-rows: auto auto 3rem;
+    grid-template-rows: auto auto auto;
     `
   }
 
-  padding: 1rem;
-  max-width: calc(100% - 2rem);
-  min-width: calc(100% - 2rem);
+  max-width: 100%;
+  min-width: 100%;
   align-items: flex-start;
   background: #fff;
+  box-sizing: border-box; 
+  padding: 1rem;
 
   ${fadeIn}
 
