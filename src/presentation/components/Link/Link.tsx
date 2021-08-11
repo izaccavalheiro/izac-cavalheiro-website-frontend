@@ -14,10 +14,12 @@ interface LinkProps extends ComponentProps {
 export const Link = (props: LinkProps): React.ReactElement => {
   const {
     href,
-    children
+    children,
+    target,
+    title
   } = props
 
   return (
-    <StyledLink href={href}>{children}</StyledLink>
+    <StyledLink href={href} target={target} title={title}>{children}</StyledLink>
   )
 }
