@@ -1,48 +1,36 @@
 import * as React from "react"
 import { PageProps } from "gatsby"
 import {
-  Link as TLink,
-  useTranslation,
-  useI18next
+  useTranslation
 } from "gatsby-plugin-react-i18next"
 
 import {
   Div,
-  Footer,
   Section,
-  H2,
-  H3,
-  Paragraph
+  H1
 } from "../../components"
 
 import {
   Layout,
   Main,
-  MainNav,
+  MainFooter,
   MainHeader
 } from "../../modules"
 
-import { useLanguages } from "../../hooks"
-
 export function NotFoundPage(props: PageProps) {
   const {t} = useTranslation()
-
-  const year = "2021"
 
   return <Layout>
     <Main responsive fullWidth>
       <MainHeader />
 
-      <MainNav />
-
-      <Section id="about-page">
+      <Section id="not-found-page">
         <Div>
-          <H2 className="text-align-center">{t("Not Found")}</H2>
+          <H1 className="text-align-center">{t("Not Found")}</H1>
         </Div>
       </Section>
-      <Footer>
-        <Paragraph>{t("Izac Cavalheiro")}, { year }. </Paragraph>
-      </Footer>
+      
+      <MainFooter />
     </Main>
   </Layout>
 }
