@@ -5,15 +5,22 @@ import { fadeIn } from '../../styles'
 export const Wrapper = styled.div`
   flex: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: row;
   max-width: 100%;
   min-height: auto;
   max-height: 4rem;
   justify-content: flex-end;
+  max-height: 4rem;
+  min-height: 4rem;
+  overflow: hidden;
 
   ${fadeIn}
+
+  &:hover {
+    max-height: unset;
+  }
 
   &.dark-mode {
     background: #000;
@@ -45,15 +52,9 @@ export const Wrapper = styled.div`
     flex-direction: column;
     list-style: inside none;
     gap: 1rem;
-    max-height: 4rem;
     min-height: 4rem;
-    overflow: hidden;
 
     ${fadeIn}
-
-    &:hover {
-      max-height: unset;
-    }
 
     > li {
       background: #000;
@@ -94,8 +95,15 @@ export const Wrapper = styled.div`
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
+        text-decoration: none;
+        transition: all .2s ease-in;
 
         ${fadeIn}
+
+        &:hover {
+          transform: scale(1.25);
+          text-decoration: none;
+        }
       }
     }
   }
