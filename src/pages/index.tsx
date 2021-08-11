@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql, PageProps } from "gatsby"
 
-import { Home } from "../presentation/pages/Index"
+import { Home } from "../presentation/pages/Home"
 
 export default function Page(props: PageProps): JSX.Element {
   return <>
