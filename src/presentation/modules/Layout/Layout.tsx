@@ -48,7 +48,7 @@ const LayoutComponent = (props: LayoutProps): React.ReactElement => {
         <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.4.3/webcomponents-loader.js"></script>
         <script type="module"
           async
-          src="https://unpkg.com/ic-webcomponents@0.0.11/dist/ic-webcomponents/ic-webcomponents.esm.js"
+          src="https://unpkg.com/ic-webcomponents@0.0.12/dist/ic-webcomponents/ic-webcomponents.esm.js"
         ></script>
 
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${data.vendor.google.gtmId}`}></script>
