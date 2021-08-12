@@ -19,6 +19,7 @@ interface LogoProps extends ComponentProps {
   target?: string
   size?: string
   darkMode?: boolean
+  alt?: string
 }
 
 export const LogoComponent = (props: LogoProps): React.ReactElement => {
@@ -26,7 +27,8 @@ export const LogoComponent = (props: LogoProps): React.ReactElement => {
     className,
     href,
     size,
-    darkMode
+    darkMode,
+    alt
   } = props
 
   const persistProps = {
@@ -36,7 +38,7 @@ export const LogoComponent = (props: LogoProps): React.ReactElement => {
 
   return (
     <Wrapper className={`logo ${className}`} {...persistProps}>
-      <Image src={darkMode ? darkModeLogoSource : logoSource} />
+      <Image src={darkMode ? darkModeLogoSource : logoSource} alt={alt} />
     </Wrapper>
   )
 }
