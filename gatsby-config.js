@@ -1,3 +1,5 @@
+const siteUrl = process.env.URL || `https://izaccavalheiro.com`
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://izaccavalheiro.com",
@@ -100,7 +102,7 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://izaccavalheiro.com',
-        sitemap: 'https://izaccavalheiro.com/sitemap.xml',
+        sitemap: 'https://izaccavalheiro.com/sitemap',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
