@@ -63,7 +63,7 @@ export const MainHeaderComponent = (props: MainHeaderProps): React.ReactElement 
 
       <LanguageSelector current={!languages.includes(currentLanguage) ? 'en' : currentLanguage} data={languages} handleUpdate={() => handleChangeLanguage} />
 
-      <ic-switch dark-mode={darkMode} active={darkModeToggle} onClick={handleDarkModeToggleClick}></ic-switch>
+      <ic-switch dark-mode={darkMode} active={darkModeToggle} onClick={handleDarkModeToggleClick} label={t("DarkModeToggleLabel")}></ic-switch>
 
       <ic-menu-toggle dark-mode={darkMode} active={menuToggle} onClick={handleMenuToggleClick}></ic-menu-toggle>
     </Div>
