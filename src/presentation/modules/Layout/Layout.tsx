@@ -2,6 +2,8 @@ import * as React from "react"
 import { Helmet } from "react-helmet"
 import { connect } from "react-redux"
 
+import { useLanguages } from "../../hooks"
+
 import {ComponentProps} from "../../components"
 
 import {GlobalStyle} from "./styles"
@@ -16,6 +18,10 @@ interface LayoutProps extends ComponentProps {
 
 const LayoutComponent = (props: LayoutProps): React.ReactElement => {
   const {
+    current: currentLanguage
+  } = useLanguages()
+
+  const {
     children,
     pageTitle
   } = props
@@ -24,7 +30,11 @@ const LayoutComponent = (props: LayoutProps): React.ReactElement => {
     <>
       <GlobalStyle />
 
-      <Helmet>
+      <Helmet
+        htmlAttributes={{
+          lang: (currentLanguage || 'en')
+        }}
+      >
         <title>{pageTitle}</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />

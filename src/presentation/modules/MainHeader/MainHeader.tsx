@@ -4,7 +4,6 @@ import { connect } from "react-redux"
 import { ComponentProps } from "../../components"
 
 import {
-  H1,
   Div
 } from "../../components"
 
