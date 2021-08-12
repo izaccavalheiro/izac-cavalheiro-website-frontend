@@ -29,7 +29,7 @@ export function AboutComponent(props: AboutComponentProps) {
   } = props
 
   return <>
-    <Layout pageTitle={t('AboutPageTitle')}>
+    <Layout pageTitle={t('AboutPageTitle')} pageDescription={t('AboutPageDescription')}>
       <Main responsive fullWidth>
         <MainHeader currentPath={path} />
 

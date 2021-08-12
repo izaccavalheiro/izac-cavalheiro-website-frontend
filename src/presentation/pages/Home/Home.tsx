@@ -28,7 +28,7 @@ export function HomeComponent(props: HomeComponentProps) {
     path
   } = props
 
-  return <Layout pageTitle={t('IndexPageTitle')}>
+  return <Layout pageTitle={t('IndexPageTitle')} pageDescription={t('IndexPageDescription')}>
     <Main responsive fullWidth>
       <MainHeader currentPath={path} />
 

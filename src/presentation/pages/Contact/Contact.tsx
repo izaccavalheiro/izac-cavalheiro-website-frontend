@@ -28,7 +28,7 @@ export function ContactComponent(props: ContactComponentProps) {
     path
   } = props
 
-  return <Layout pageTitle={t('ContactPageTitle')}>
+  return <Layout pageTitle={t('ContactPageTitle')} pageDescription={t('ContactPageDescription')}>
     <Main responsive fullWidth>
       <MainHeader currentPath={path} />
 

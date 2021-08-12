@@ -14,6 +14,7 @@ interface LayoutProps extends ComponentProps {
   darkMode?: boolean
   darkModeToggle?: () => void
   pageTitle?: string
+  pageDescription?: string
 }
 
 const LayoutComponent = (props: LayoutProps): React.ReactElement => {
@@ -23,7 +24,8 @@ const LayoutComponent = (props: LayoutProps): React.ReactElement => {
 
   const {
     children,
-    pageTitle
+    pageTitle,
+    pageDescription
   } = props
 
   return (
@@ -36,6 +38,8 @@ const LayoutComponent = (props: LayoutProps): React.ReactElement => {
         }}
       >
         <title>{pageTitle}</title>
+
+        <meta name="description" content={pageDescription}></meta>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
