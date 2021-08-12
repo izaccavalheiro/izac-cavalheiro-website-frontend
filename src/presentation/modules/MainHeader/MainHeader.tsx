@@ -56,7 +56,7 @@ export const MainHeaderComponent = (props: MainHeaderProps): React.ReactElement 
 
   return <Wrapper>
     <Div className={`top ${!!menuToggle ? 'show-nav' : ''}`}>
-      <Logo size="large" alt={t("LogoAltText")} />
+      <Logo size="large" alt={t("LogoAltText")} href={`/${currentLanguage}`} />
 
       <MainNav currentPath={currentPath} active={menuToggle} display={menuToggle} />
 
