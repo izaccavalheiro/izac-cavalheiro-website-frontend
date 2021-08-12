@@ -28,12 +28,12 @@ export const slideUp = css`
 
   @keyframes slideUp {
     0% {
-      top: 10px;
+      transform: translate(0, 1rem);
       opacity: 0;
     }
 
     100% {
-      top: 0px;
+      transform: translate(0, 0rem);
       opacity: 1;
     }
   }
