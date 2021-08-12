@@ -21,7 +21,7 @@ export const Wrapper = styled.a`
       width: 100%;
       height: auto;
       min-height: auto;
-      max-height: auto;
+      max-height: unset;
     }
   }
 

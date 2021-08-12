@@ -16,7 +16,7 @@ export const StyledNav = styled.nav`
     gap: 1rem;
 
     > li {
-      display: 1;
+      flex: 1;
 
       > a {
         text-decoration: none;

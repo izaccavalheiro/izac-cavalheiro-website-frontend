@@ -15,7 +15,6 @@ module.exports = {
       }
     },
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -102,7 +101,7 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://izaccavalheiro.com',
-        sitemap: 'https://izaccavalheiro.com/sitemap',
+        sitemap: 'https://izaccavalheiro.com/sitemap/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
@@ -129,10 +128,10 @@ module.exports = {
         serialize: ({ path, modifiedGmt }) => {
           return {
             url: path,
-            lastmod: modifiedGmt,
+            lastmod: modifiedGmt
           }
-        },
-      },
-    },
+        }
+      }
+    }
   ]
 }
