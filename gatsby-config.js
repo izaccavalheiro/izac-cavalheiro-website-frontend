@@ -81,7 +81,18 @@ module.exports = {
         // An optional attribute which provides support for CORS check.
         // If you do not provide a crossOrigin option, it will skip CORS for manifest.
         // Any invalid keyword or empty string defaults to `anonymous`
-        crossOrigin: `use-credentials`
+        crossOrigin: `use-credentials`,
+        icons: [{
+          "src": "src/presentation/assets/images/logo-izac-cavalheiro.png",
+          "sizes": "512x512",
+          "type": "image/png",
+          "purpose": "any maskable"
+        }, {
+          "src": "src/presentation/assets/images/logo-izac-cavalheiro-196.png",
+          "sizes": "196x196",
+          "type": "image/png",
+          "purpose": "any maskable"
+        }]
       }
     }
   ]
