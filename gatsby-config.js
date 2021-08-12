@@ -109,14 +109,17 @@ module.exports = {
       resolve: "gatsby-plugin-sitemap",
       options: {
         query: `
-        {
-          allSitePage {
-            nodes {
-              path
+          {
+            allSitePage {
+              nodes {
+                path
+              }
             }
           }
-        }
-      `,
+        `,
+        excludes: [
+          '/offline-plugin-app-shell-fallback'
+        ],
         resolveSiteUrl: () => siteUrl,
         resolvePages: ({
           allSitePage: { nodes: allPages }
