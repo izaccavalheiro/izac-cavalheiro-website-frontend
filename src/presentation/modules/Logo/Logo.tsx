@@ -24,7 +24,7 @@ interface LogoProps extends ComponentProps {
 
 export const LogoComponent = (props: LogoProps): React.ReactElement => {
   const {
-    className,
+    className = '',
     href,
     size,
     darkMode,

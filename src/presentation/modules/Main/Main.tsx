@@ -17,7 +17,7 @@ export const MainComponent = (props: MainProps): React.ReactElement => {
     fullWidth,
     responsive,
     id,
-    className,
+    className = '',
     darkMode
   } = props
 
