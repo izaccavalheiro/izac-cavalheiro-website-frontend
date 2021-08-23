@@ -7,16 +7,19 @@
   Izac Cavalheiro
 </h1>
 
-## 🚀 Personal website
+## My personal website
+
+### Development
 
 1.  **Development**
-
-    Navigate into your new site’s directory and start it up.
 
     ```shell
     npm run develop
     ```
 
-2.  **Running!**
+2.  **Build**
 
-    Your site is now running at http://localhost:8000!
+    ```shell
+    npm run build
+    ```
+
