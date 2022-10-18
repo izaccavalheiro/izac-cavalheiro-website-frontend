@@ -27,6 +27,7 @@ export const SocialbarComponent = (props: SocialbarComponentProps): React.ReactE
     <ListItem><ic-social-network name="medium" dark-mode={!!darkMode}></ic-social-network></ListItem>
     <ListItem><ic-social-network name="codesandbox" dark-mode={!!darkMode}></ic-social-network></ListItem>
     <ListItem><ic-social-network name="github" dark-mode={!!darkMode}></ic-social-network></ListItem>
+    <ListItem><ic-social-network name="hackerrank" dark-mode={!!darkMode}></ic-social-network></ListItem>
   </Wrapper>
 }
 
