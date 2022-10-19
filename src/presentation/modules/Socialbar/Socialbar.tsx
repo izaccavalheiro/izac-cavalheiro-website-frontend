@@ -1,6 +1,8 @@
 import * as React from "react"
 import { connect } from "react-redux"
 
+import { useLanguages } from "../../hooks"
+
 import {
   ComponentProps,
   ListItem
@@ -16,18 +18,22 @@ interface SocialbarComponentProps extends ComponentProps {
 
 export const SocialbarComponent = (props: SocialbarComponentProps): React.ReactElement => {
   const {
+    t
+  } = useLanguages()
+
+  const {
     darkMode
   } = props
 
   return <Wrapper>
-    <ListItem><ic-social-network name="twitter" dark-mode={!!darkMode}></ic-social-network></ListItem>
-    <ListItem><ic-social-network name="facebook" dark-mode={!!darkMode}></ic-social-network></ListItem>
-    <ListItem><ic-social-network name="linkedin" dark-mode={!!darkMode}></ic-social-network></ListItem>
-    <ListItem><ic-social-network name="instagram" dark-mode={!!darkMode}></ic-social-network></ListItem>
-    <ListItem><ic-social-network name="medium" dark-mode={!!darkMode}></ic-social-network></ListItem>
-    <ListItem><ic-social-network name="codesandbox" dark-mode={!!darkMode}></ic-social-network></ListItem>
-    <ListItem><ic-social-network name="github" dark-mode={!!darkMode}></ic-social-network></ListItem>
-    <ListItem><ic-social-network name="hackerrank" dark-mode={!!darkMode}></ic-social-network></ListItem>
+    <ListItem><ic-social-network name="twitter" url={t("TwitterURL")} dark-mode={!!darkMode}></ic-social-network></ListItem>
+    <ListItem><ic-social-network name="facebook" url={t("FacebookURL")} dark-mode={!!darkMode}></ic-social-network></ListItem>
+    <ListItem><ic-social-network name="linkedin" url={t("LinkedInURL")} dark-mode={!!darkMode}></ic-social-network></ListItem>
+    <ListItem><ic-social-network name="instagram" url={t("InstagramURL")} dark-mode={!!darkMode}></ic-social-network></ListItem>
+    {/* <ListItem><ic-social-network name="medium" url={t("MediumURL")} dark-mode={!!darkMode}></ic-social-network></ListItem> */}
+    <ListItem><ic-social-network name="codesandbox" url={t("CodeSandboxURL")} dark-mode={!!darkMode}></ic-social-network></ListItem>
+    <ListItem><ic-social-network name="github" url={t("GithubURL")} dark-mode={!!darkMode}></ic-social-network></ListItem>
+    <ListItem><ic-social-network name="hackerrank" url={t("HackerRankURL")} dark-mode={!!darkMode}></ic-social-network></ListItem>
   </Wrapper>
 }
 

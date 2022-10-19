@@ -35,7 +35,7 @@
     "gatsby-transformer-remark": "^4.5.0",
     "gatsby-transformer-sharp": "^3.8.0",
     "i18next": "^20.3.2",
-    "ic-webcomponents": "^0.0.18",
+    "ic-webcomponents": "^0.0.20",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
