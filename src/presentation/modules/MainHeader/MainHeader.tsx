@@ -54,6 +54,23 @@ export const MainHeaderComponent = (props: MainHeaderProps): React.ReactElement 
     darkModeToggleFn()
   }
 
+  React.useEffect(() => {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setDarkModeToggle(true)
+      darkModeToggleFn()
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+      if (event.matches) {
+        setDarkModeToggle(true)
+      } else {
+        setDarkModeToggle(false)
+      }
+      
+      darkModeToggleFn()
+    });
+  }, [])
+
   return <Wrapper>
     <Div className={`top ${!!menuToggle ? 'show-nav' : ''}`}>
       <Logo size="large" alt={t("LogoAltText")} href={`/${currentLanguage}`} />
