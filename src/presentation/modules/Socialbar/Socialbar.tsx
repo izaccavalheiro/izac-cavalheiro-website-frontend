@@ -37,8 +37,8 @@ export const SocialbarComponent = (props: SocialbarComponentProps): React.ReactE
   </Wrapper>
 }
 
-const mapStateToProps = ({ darkMode }) => {
-  return { darkMode }
+const mapStateToProps = (state) => {
+  return { darkMode: state.main.darkMode || null }
 }
 
 export const Socialbar = connect(mapStateToProps, {})(SocialbarComponent)

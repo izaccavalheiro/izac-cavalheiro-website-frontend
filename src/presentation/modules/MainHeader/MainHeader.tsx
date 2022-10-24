@@ -23,8 +23,8 @@ import { MainNav } from "../"
 import { setDarkMode } from "../../state/actions"
 
 interface MainHeaderProps extends ComponentProps {
-  setDarkMode: (a: boolean) => void
-  darkMode?: string
+  setDarkMode: (a: boolean, b?:boolean) => void
+  darkMode?: boolean
   currentPath: string
 }
 
@@ -61,23 +61,20 @@ export const MainHeaderComponent = (props: MainHeaderProps): React.ReactElement 
   }
 
   React.useEffect(() => {
-    if (darkMode === null) {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        setDarkMode(true)
-      } else {
-        setDarkMode(false)
-      }
-
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-        if (event.matches) {
-          setDarkMode(true)
-        } else {
-          setDarkMode(false)
-        }
-      });
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setDarkMode(true, true)
+    } else {
+      setDarkMode(false, true)
     }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+      if (event.matches) {
+        setDarkMode(true, true)
+      } else {
+        setDarkMode(false, true)
+      }
+    });
   }, [
-    darkMode,
     setDarkMode
   ])
 
@@ -96,8 +93,10 @@ export const MainHeaderComponent = (props: MainHeaderProps): React.ReactElement 
   </Wrapper>
 }
 
-const mapStateToProps = ({ darkMode }) => {
-  return { darkMode }
+const mapStateToProps = (state) => {
+  return {
+    darkMode: state.main.darkMode || null,
+  }
 }
 
 export const MainHeader = connect(mapStateToProps, { setDarkMode })(MainHeaderComponent)

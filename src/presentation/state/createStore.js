@@ -1,25 +1,36 @@
-import { createStore as reduxCreateStore } from "redux"
+import { createStore } from "redux"
 
-import getLocalStorageState from "./localStorage"
+import reducers from './reducers'
 
-const reducer = (state, action) => {
-  const newState = {...state}
+function saveToLocalStorage(state) {
+  try {
+    const serialisedState = JSON.stringify(state);
 
-  if (action.type === `SET_DARK_MODE`) {
-    localStorage.setItem('darkMode', action.payload)
-
-    return Object.assign({}, newState, {
-      darkMode: action.payload,
-    })
+    localStorage.setItem("state", serialisedState);
+  } catch (e) {
+    console.warn(e);
   }
-
-  return newState
 }
 
-const initialState = {
-  darkMode: false,
-  ...getLocalStorageState()
+function loadFromLocalStorage() {
+  try {
+    const serialisedState = localStorage.getItem("state");
+
+    if (serialisedState === null) return undefined;
+
+    return JSON.parse(serialisedState);
+  } catch (e) {
+    console.warn(e);
+    return undefined;
+  }
 }
 
-const createStore = () => reduxCreateStore(reducer, initialState)
-export default createStore
+const store = () => {
+  const createdStore = createStore(reducers, loadFromLocalStorage())
+
+  createdStore.subscribe(() => saveToLocalStorage(createdStore.getState()));
+
+  return createdStore
+};
+
+export default store;

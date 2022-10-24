@@ -39,8 +39,8 @@ export function ContactComponent(props: ContactComponentProps) {
   </Layout>
 }
 
-const mapStateToProps = ({ darkMode }) => {
-  return { darkMode }
+const mapStateToProps = (state) => {
+  return { darkMode: state.main.darkMode || null }
 }
 
 export const Contact = connect(mapStateToProps, {})(ContactComponent)

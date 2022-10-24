@@ -56,8 +56,8 @@ export const LanguageSelectorComponent = (props: LanguageSelectorProps): React.R
   )
 }
 
-const mapStateToProps = ({ darkMode }) => {
-  return { darkMode }
+const mapStateToProps = (state) => {
+  return { darkMode: state.main.darkMode || null }
 }
 
 export const LanguageSelector = connect(mapStateToProps, {})(LanguageSelectorComponent)

@@ -76,8 +76,8 @@ export const MainNavComponent = (props: MainNavComponentProps): React.ReactEleme
   </Wrapper>
 }
 
-const mapStateToProps = ({ darkMode }) => {
-  return { darkMode }
+const mapStateToProps = (state) => {
+  return { darkMode: state.main.darkMode || null }
 }
 
 export const MainNav = connect(mapStateToProps, {})(MainNavComponent)

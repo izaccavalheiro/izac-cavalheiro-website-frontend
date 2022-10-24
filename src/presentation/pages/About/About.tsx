@@ -41,8 +41,8 @@ export function AboutComponent(props: AboutComponentProps) {
   </>
 }
 
-const mapStateToProps = ({ darkMode }) => {
-  return { darkMode }
+const mapStateToProps = (state) => {
+  return { darkMode: state.main.darkMode || null }
 }
 
 export const About = connect(mapStateToProps, {})(AboutComponent)

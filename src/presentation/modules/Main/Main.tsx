@@ -34,8 +34,8 @@ export const MainComponent = (props: MainProps): React.ReactElement => {
   )
 }
 
-const mapStateToProps = ({ darkMode }) => {
-  return { darkMode }
+const mapStateToProps = (state) => {
+  return { darkMode: state.main.darkMode || null }
 }
 
 export const Main = connect(mapStateToProps, {})(MainComponent)

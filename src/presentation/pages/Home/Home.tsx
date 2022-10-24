@@ -39,8 +39,8 @@ export function HomeComponent(props: HomeComponentProps) {
   </Layout>
 }
 
-const mapStateToProps = ({ darkMode }) => {
-  return { darkMode }
+const mapStateToProps = (state) => {
+  return { darkMode: state.main.darkMode || null }
 }
 
 export const Home = connect(mapStateToProps, {})(HomeComponent)

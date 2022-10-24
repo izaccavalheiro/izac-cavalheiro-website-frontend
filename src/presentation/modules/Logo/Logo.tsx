@@ -43,8 +43,8 @@ export const LogoComponent = (props: LogoProps): React.ReactElement => {
   )
 }
 
-const mapStateToProps = ({ darkMode }) => {
-  return { darkMode }
+const mapStateToProps = (state) => {
+  return { darkMode: state.main.darkMode || null }
 }
 
 export const Logo = connect(mapStateToProps, {})(LogoComponent)
