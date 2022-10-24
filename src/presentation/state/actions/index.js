@@ -1,3 +1,3 @@
-export const darkModeToggle = () => {
-  return { type: `DARK_MODE_TOGGLE` }
+export const setDarkMode = (payload) => {
+  return { type: `SET_DARK_MODE`, payload }
 }

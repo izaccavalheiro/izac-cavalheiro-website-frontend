@@ -20,10 +20,10 @@ import {
 
 import { MainNav } from "../"
 
-import { darkModeToggle } from "../../state/actions"
+import { setDarkMode } from "../../state/actions"
 
 interface MainHeaderProps extends ComponentProps {
-  darkModeToggle: () => void
+  setDarkMode: (a: boolean) => void
   darkMode?: string
   currentPath: string
 }
@@ -37,39 +37,49 @@ export const MainHeaderComponent = (props: MainHeaderProps): React.ReactElement 
   } = useLanguages()
 
   const {
-    darkModeToggle: darkModeToggleFn,
+    setDarkMode,
     darkMode,
     currentPath
   } = props
 
   const [menuToggle, setMenuToggle] = React.useState(false)
-  const [darkModeToggle, setDarkModeToggle] = React.useState(false)
 
   function handleMenuToggleClick() {
-    setMenuToggle(!menuToggle)
+    if (menuToggle) {
+      setMenuToggle(false)
+    } else {
+      setMenuToggle(true)
+    }
   }
 
   function handleDarkModeToggleClick() {
-    setDarkModeToggle(!darkModeToggle)
-    darkModeToggleFn()
+    if (darkMode) {
+      setDarkMode(false)
+    } else {
+      setDarkMode(true)
+    }
   }
 
   React.useEffect(() => {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setDarkModeToggle(true)
-      darkModeToggleFn()
-    }
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-      if (event.matches) {
-        setDarkModeToggle(true)
+    if (darkMode === null) {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setDarkMode(true)
       } else {
-        setDarkModeToggle(false)
+        setDarkMode(false)
       }
-      
-      darkModeToggleFn()
-    });
-  }, [])
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        if (event.matches) {
+          setDarkMode(true)
+        } else {
+          setDarkMode(false)
+        }
+      });
+    }
+  }, [
+    darkMode,
+    setDarkMode
+  ])
 
   return <Wrapper>
     <Div className={`top ${!!menuToggle ? 'show-nav' : ''}`}>
@@ -79,7 +89,7 @@ export const MainHeaderComponent = (props: MainHeaderProps): React.ReactElement 
 
       <LanguageSelector current={!languages.includes(currentLanguage) ? 'en' : currentLanguage} data={languages} handleUpdate={() => handleChangeLanguage} />
 
-      <ic-switch dark-mode={darkMode} active={darkModeToggle} onClick={handleDarkModeToggleClick} label={t("DarkModeToggleLabel")}></ic-switch>
+      <ic-switch dark-mode={darkMode} active={darkMode} onClick={handleDarkModeToggleClick} label={t("DarkModeToggleLabel")}></ic-switch>
 
       <ic-menu-toggle dark-mode={darkMode} active={menuToggle} onClick={handleMenuToggleClick} label={t("MenuToggleLabel")}></ic-menu-toggle>
     </Div>
@@ -90,4 +100,4 @@ const mapStateToProps = ({ darkMode }) => {
   return { darkMode }
 }
 
-export const MainHeader = connect(mapStateToProps, { darkModeToggle })(MainHeaderComponent)
+export const MainHeader = connect(mapStateToProps, { setDarkMode })(MainHeaderComponent)
