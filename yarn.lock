@@ -4321,9 +4321,9 @@ decode-named-character-reference@^1.0.0:
     character-entities "^2.0.0"
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-  integrity sha512-hjf+xovcEn31w/EUYdTXQh/8smFL/dzYjohQGEIgjyNavaJfBY2p5F527Bo1VPATxv0VYTUC2bOcXvqFwk78Og==
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
+  integrity sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==
 
 decompress-response@^3.3.0:
   version "3.3.0"
@@ -7033,10 +7033,10 @@ i18next@^20.3.2:
   dependencies:
     "@babel/runtime" "^7.12.0"
 
-ic-webcomponents@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/ic-webcomponents/-/ic-webcomponents-0.0.5.tgz#bdbdf2e2d2e6c238831b9e60a8cc7d09044e88b6"
-  integrity sha512-zNFu+XWgv2vvMAGQqRTsIap6Jw9fnzPtbC8tgMLuUbmnIDhuaoHPFElj9roZBmcpbXou16qtKEaX7QB03BVPoQ==
+ic-webcomponents@^0.0.20:
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/ic-webcomponents/-/ic-webcomponents-0.0.20.tgz#699a9e38c54477abd33e30d495e13dd0b89e6c15"
+  integrity sha512-xU6qlFBhYTcXUtS371TfpOeUxigmalnyrvgg6XUwMA2RiEI+XEEymEfn3Q1R+nw8xKBC3cEHjjQGRl6isGGbkw==
   dependencies:
     "@stencil/core" "^2.0.1"
 
