@@ -26,7 +26,6 @@ export const SocialbarComponent = (props: SocialbarComponentProps): React.ReactE
   } = props
 
   return <Wrapper>
-    <ListItem><ic-social-network name="twitter" url={t("TwitterURL")} dark-mode={!!darkMode}></ic-social-network></ListItem>
     <ListItem><ic-social-network name="facebook" url={t("FacebookURL")} dark-mode={!!darkMode}></ic-social-network></ListItem>
     <ListItem><ic-social-network name="linkedin" url={t("LinkedInURL")} dark-mode={!!darkMode}></ic-social-network></ListItem>
     <ListItem><ic-social-network name="instagram" url={t("InstagramURL")} dark-mode={!!darkMode}></ic-social-network></ListItem>
