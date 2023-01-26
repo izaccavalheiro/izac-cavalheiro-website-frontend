@@ -33,10 +33,6 @@ export const data = {
       url: 'https://fb.me/izaccavalheiro',
       exclude: ['languages', '']
     },{
-      name: 'twitter',
-      url: 'https://twitter.com/izaccavalheiro',
-      exclude: ['languages', '']
-    },{
       name: 'linkedin',
       url: 'https://linkedin.com/in/izaccavalheiro',
       exclude: ['languages', '']
