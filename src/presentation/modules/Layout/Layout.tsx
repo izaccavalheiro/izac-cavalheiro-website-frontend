@@ -48,7 +48,7 @@ const LayoutComponent = (props: LayoutProps): React.ReactElement => {
         <script defer src="https://unpkg.com/@webcomponents/webcomponentsjs@2.4.3/webcomponents-loader.js"></script>
         <script defer type="module"
           async
-          src="https://unpkg.com/ic-webcomponents@0.0.22/dist/ic-webcomponents/ic-webcomponents.esm.js"
+          src="https://unpkg.com/ic-webcomponents@0.0.23/dist/ic-webcomponents/ic-webcomponents.esm.js"
         ></script>
       </Helmet>
       

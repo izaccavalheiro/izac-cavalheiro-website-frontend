@@ -32,7 +32,7 @@
     "gatsby-source-filesystem": "^3.8.0",
     "gatsby-transformer-sharp": "^3.8.0",
     "i18next": "^20.3.2",
-    "ic-webcomponents": "^0.0.22",
+    "ic-webcomponents": "^0.0.23",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
