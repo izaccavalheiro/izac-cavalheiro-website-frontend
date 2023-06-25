@@ -8,12 +8,6 @@ module.exports = {
   plugins: [
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "UA-39113521-1"
-      }
-    },
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-manifest",
@@ -21,7 +15,6 @@ module.exports = {
         icon: "./src/presentation/assets/images/favicon.png"
       }
     },
-    "gatsby-transformer-remark",
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
@@ -97,14 +90,6 @@ module.exports = {
       }
     },
     'gatsby-plugin-offline',
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: 'https://izaccavalheiro.com',
-        sitemap: 'https://izaccavalheiro.com/sitemap/sitemap-index.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
-    },
     {
       resolve: "gatsby-plugin-sitemap",
       options: {

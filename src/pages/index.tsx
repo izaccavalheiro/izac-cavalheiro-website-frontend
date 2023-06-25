@@ -9,6 +9,19 @@ export default function Page(props: PageProps): JSX.Element {
   </>
 }
 
+function Head() {
+  return <>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-53V4B3VRNQ"></script>
+    <script>
+      {`window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-53V4B3VRNQ');`}
+    </script>
+  </>
+}
+
 export const query = graphql`
   query($language: String!) {
     locales: allLocale(filter: {language: {eq: $language}}) {
