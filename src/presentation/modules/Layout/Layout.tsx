@@ -50,17 +50,6 @@ const LayoutComponent = (props: LayoutProps): React.ReactElement => {
           async
           src="https://unpkg.com/ic-webcomponents@0.0.20/dist/ic-webcomponents/ic-webcomponents.esm.js"
         ></script>
-
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${data.vendor.google.gtmId}`}></script>
-        <script>
-          {`window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            window.dataLayer && window.dataLayer.push(arguments);
-          }
-          gtag('js', new Date());
-
-          gtag('config', '{data.vendor.google.gtmId}');`}
-        </script>
       </Helmet>
       
       {children}

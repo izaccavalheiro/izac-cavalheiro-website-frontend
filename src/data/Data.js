@@ -3,7 +3,7 @@ export const data = {
     google: {
       gaId: '',
       adsId: '',
-      gtmId: 'UA-39113521-1'
+      gtmId: ''
     },
     sentry: {
       dsn: '',
