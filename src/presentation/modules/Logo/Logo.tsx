@@ -38,7 +38,7 @@ export const LogoComponent = (props: LogoProps): React.ReactElement => {
 
   return (
     <Wrapper className={`logo ${className}`} {...persistProps}>
-      <Image src={darkMode ? darkModeLogoSource : logoSource} alt={alt} />
+      <Image src={darkMode ? darkModeLogoSource : logoSource} alt={alt} width="64" height="64" />
     </Wrapper>
   )
 }
